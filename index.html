@@ -11,34 +11,24 @@
     --crimson:#7B1C1C;--crimson-deep:#5A1010;--crimson-light:#9B2C2C;
     --gold:#C9A84C;--white:#F5F0EB;--off-white:#EDE8E1;
     --dark:#1A0A0A;--dark-card:#220E0E;--muted:#8A7070;--border:rgba(201,168,76,0.18);
-    --green:#4A7C59;--red:#7C2A2A;
   }
   body{font-family:'DM Sans',sans-serif;background:var(--dark);color:var(--white);min-height:100vh;display:flex;flex-direction:column;max-width:520px;margin:0 auto;}
-  ::-webkit-scrollbar{width:3px;}
-  ::-webkit-scrollbar-thumb{background:var(--crimson);border-radius:4px;}
-
-  /* HEADER */
+  ::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--crimson);border-radius:4px;}
   .header{padding:14px 18px 12px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(90,16,16,0.2) 0%,transparent 100%);display:flex;align-items:center;justify-content:space-between;}
   .logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:14px;color:var(--gold);animation:glow 3s ease-in-out infinite;}
   .brand-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;}
   .brand-sub{font-size:10px;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;}
   .live-badge{display:flex;align-items:center;gap:5px;padding:4px 9px;border-radius:20px;background:rgba(74,124,89,0.15);border:1px solid rgba(74,124,89,0.3);font-size:10px;color:#6EBB8A;}
   .live-dot{width:5px;height:5px;border-radius:50%;background:#6EBB8A;animation:pulse 2s ease-in-out infinite;}
-
-  /* MODES */
   .modes{padding:10px 18px;border-bottom:1px solid var(--border);display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;}
   .modes::-webkit-scrollbar{display:none;}
   .mode-btn{padding:6px 12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-size:11px;font-weight:500;white-space:nowrap;transition:all 0.2s;font-family:'DM Sans',sans-serif;}
   .mode-btn.active{border-color:var(--gold);background:rgba(123,28,28,0.3);color:var(--gold);}
-
-  /* TABS */
-  .tabs{display:flex;border-bottom:1px solid var(--border);padding:0 18px;}
-  .tab{padding:8px 12px;background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);cursor:pointer;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;transition:all 0.2s;font-family:'DM Sans',sans-serif;}
+  .tabs{display:flex;border-bottom:1px solid var(--border);padding:0 18px;overflow-x:auto;scrollbar-width:none;}
+  .tabs::-webkit-scrollbar{display:none;}
+  .tab{padding:8px 12px;background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);cursor:pointer;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.07em;transition:all 0.2s;font-family:'DM Sans',sans-serif;white-space:nowrap;}
   .tab.active{border-bottom-color:var(--gold);color:var(--gold);}
-
   .content{flex:1;display:flex;flex-direction:column;overflow:hidden;min-height:0;}
-
-  /* CHAT */
   .chat-area{flex:1;overflow-y:auto;padding:14px 18px;display:flex;flex-direction:column;}
   .empty-state{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 20px;}
   .empty-icon{font-size:34px;margin-bottom:12px;}
@@ -46,41 +36,30 @@
   .empty-desc{font-size:12px;color:var(--muted);line-height:1.7;max-width:260px;}
   .suggestions{margin-top:18px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;}
   .sug-btn{padding:5px 11px;border-radius:20px;background:rgba(123,28,28,0.2);border:1px solid var(--border);color:var(--muted);cursor:pointer;font-size:11px;font-family:'DM Sans',sans-serif;}
-
-  /* MESSAGES */
   .msg{display:flex;margin-bottom:12px;animation:fadeUp 0.3s ease;}
   .msg.user{justify-content:flex-end;}
   .avatar{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:9px;font-family:'Playfair Display',serif;color:var(--gold);margin-right:8px;flex-shrink:0;margin-top:2px;}
   .bubble{max-width:80%;padding:10px 14px;border-radius:4px 16px 16px 16px;background:var(--dark-card);border:1px solid var(--border);color:var(--off-white);font-size:13px;line-height:1.65;white-space:pre-wrap;word-break:break-word;}
   .msg.user .bubble{border-radius:16px 16px 4px 16px;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border-color:transparent;color:var(--white);}
-
-  /* TYPING */
   .typing{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
   .typing-dots{display:flex;gap:4px;padding:10px 14px;background:var(--dark-card);border:1px solid var(--border);border-radius:4px 16px 16px 16px;}
   .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);}
   .dot:nth-child(1){animation:typing 1.2s ease-in-out 0s infinite;}
   .dot:nth-child(2){animation:typing 1.2s ease-in-out 0.2s infinite;}
   .dot:nth-child(3){animation:typing 1.2s ease-in-out 0.4s infinite;}
-
-  /* AVAILABILITY CARD in chat */
-  .avail-card{background:var(--dark-card);border:1px solid var(--border);border-radius:12px;padding:14px;margin-top:4px;max-width:90%;}
-  .avail-header{font-family:'Playfair Display',serif;font-size:13px;color:var(--gold);margin-bottom:10px;}
+  .avail-card{background:var(--dark-card);border:1px solid var(--border);border-radius:12px;padding:14px;margin-top:4px;max-width:92%;}
+  .avail-header{font-family:'Playfair Display',serif;font-size:13px;color:var(--gold);margin-bottom:8px;}
   .avail-dates{font-size:11px;color:var(--muted);margin-bottom:10px;}
-  .avail-section{margin-bottom:8px;}
-  .avail-section-title{font-size:10px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;}
+  .avail-section-title{font-size:10px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:5px;}
   .avail-section-title.green{color:#6EBB8A;}
   .avail-section-title.red{color:#E07070;}
-  .avail-item{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;border-radius:8px;margin-bottom:4px;font-size:12px;}
+  .avail-item{display:flex;justify-content:space-between;align-items:center;padding:5px 9px;border-radius:7px;margin-bottom:3px;font-size:12px;}
   .avail-item.available{background:rgba(74,124,89,0.12);border:1px solid rgba(74,124,89,0.2);}
   .avail-item.unavailable{background:rgba(124,42,42,0.12);border:1px solid rgba(124,42,42,0.2);}
   .avail-item-name{color:var(--off-white);}
-  .avail-item-price{color:var(--gold);font-size:11px;}
-  .avail-item-status{font-size:10px;}
-  .avail-item-status.green{color:#6EBB8A;}
-  .avail-item-status.red{color:#E07070;}
-  .avail-total{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);}
-
-  /* INPUT */
+  .avail-item-status.green{color:#6EBB8A;font-size:11px;}
+  .avail-item-status.red{color:#E07070;font-size:11px;}
+  .avail-total{margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);}
   .input-area{padding:10px 18px 18px;border-top:1px solid var(--border);}
   .clear-btn{background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;margin-bottom:7px;font-family:'DM Sans',sans-serif;}
   .input-row{display:flex;gap:8px;}
@@ -90,10 +69,9 @@
   .send-btn{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border:1px solid rgba(201,168,76,0.3);color:var(--gold);cursor:pointer;font-size:17px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
   .send-btn:disabled{opacity:0.4;cursor:not-allowed;}
   .footer-text{margin-top:7px;font-size:9px;color:var(--muted);text-align:center;letter-spacing:0.05em;}
-
-  /* FLEET TAB */
   .scroll-area{flex:1;overflow-y:auto;padding:14px 18px;}
   .section-title{font-family:'Playfair Display',serif;font-size:15px;color:var(--gold);margin-bottom:12px;}
+  .section-sub{font-size:11px;color:var(--muted);margin-bottom:14px;line-height:1.6;}
   .vehicle-card{padding:10px 13px;border-radius:10px;background:var(--dark-card);border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;}
   .v-name{font-size:13px;font-weight:600;color:var(--off-white);}
   .v-cat{font-size:10px;padding:2px 7px;border-radius:20px;display:inline-block;margin-top:3px;font-family:monospace;}
@@ -110,10 +88,9 @@
   .date-label{font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:5px;}
   .date-input{width:100%;padding:9px 11px;border-radius:10px;border:1px solid var(--border);background:rgba(26,10,10,0.8);color:var(--white);font-size:13px;font-family:'DM Sans',sans-serif;outline:none;}
   .date-input:focus{border-color:var(--gold);}
-  .check-btn{width:100%;padding:12px;border-radius:11px;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border:1px solid rgba(201,168,76,0.3);color:var(--gold);font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:0.03em;}
-  .check-btn:disabled{opacity:0.5;cursor:not-allowed;}
-  .avail-error{color:#E07070;font-size:12px;margin-top:8px;min-height:16px;}
-  .results-area{margin-top:14px;}
+  .check-btn{width:100%;padding:12px;border-radius:11px;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border:1px solid rgba(201,168,76,0.3);color:var(--gold);font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;}
+  .form-error{color:#E07070;font-size:12px;margin-top:8px;min-height:16px;}
+  .results-area{margin-top:4px;}
   .result-header{font-size:12px;color:var(--muted);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);}
   .result-item{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-radius:10px;margin-bottom:6px;}
   .result-item.av{background:rgba(74,124,89,0.1);border:1px solid rgba(74,124,89,0.25);}
@@ -129,13 +106,33 @@
   .summary-box{padding:12px;border-radius:10px;background:rgba(201,168,76,0.06);border:1px solid var(--border);font-size:12px;color:var(--muted);margin-top:10px;line-height:1.8;}
 
   /* BOOKINGS TAB */
+  .booking-tabs{display:flex;gap:8px;margin-bottom:14px;}
+  .booking-tab-btn{padding:7px 14px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-size:12px;font-family:'DM Sans',sans-serif;transition:all 0.2s;}
+  .booking-tab-btn.active{border-color:var(--gold);background:rgba(123,28,28,0.3);color:var(--gold);}
+
+  /* IMPORT SECTION */
+  .import-card{padding:16px;border-radius:12px;background:var(--dark-card);border:1px solid var(--border);margin-bottom:14px;}
+  .import-title{font-family:'Playfair Display',serif;font-size:14px;color:var(--gold);margin-bottom:4px;}
+  .import-sub{font-size:11px;color:var(--muted);margin-bottom:12px;line-height:1.6;}
+  .import-format{padding:10px 12px;border-radius:8px;background:rgba(26,10,10,0.6);border:1px solid var(--border);font-size:11px;color:var(--muted);font-family:monospace;margin-bottom:12px;line-height:1.8;}
+  .import-textarea{width:100%;padding:11px 13px;border-radius:10px;border:1px solid var(--border);background:rgba(26,10,10,0.8);color:var(--white);font-size:12px;font-family:monospace;outline:none;resize:vertical;min-height:120px;line-height:1.7;}
+  .import-textarea:focus{border-color:var(--gold);}
+  .import-textarea::placeholder{color:var(--muted);}
+  .import-btn{width:100%;padding:11px;border-radius:10px;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border:1px solid rgba(201,168,76,0.3);color:var(--gold);font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:10px;}
+  .import-preview{margin-top:12px;}
+  .import-preview-title{font-size:11px;color:var(--gold);margin-bottom:7px;text-transform:uppercase;letter-spacing:0.07em;}
+  .preview-item{padding:6px 10px;border-radius:7px;background:rgba(74,124,89,0.1);border:1px solid rgba(74,124,89,0.2);font-size:11px;color:var(--off-white);margin-bottom:4px;display:flex;justify-content:space-between;}
+  .preview-item.err{background:rgba(124,42,42,0.1);border-color:rgba(124,42,42,0.2);color:#E07070;}
+  .import-result{margin-top:10px;padding:10px;border-radius:8px;background:rgba(74,124,89,0.1);border:1px solid rgba(74,124,89,0.2);font-size:12px;color:#6EBB8A;}
+
+  /* MANUAL BOOKING FORM */
   .booking-form{padding:14px;border-radius:12px;background:var(--dark-card);border:1px solid var(--border);margin-bottom:12px;}
   .form-title{font-family:'Playfair Display',serif;font-size:14px;color:var(--gold);margin-bottom:12px;}
   .form-group{margin-bottom:10px;}
   .form-label{font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:5px;display:block;}
   .form-input{width:100%;padding:9px 11px;border-radius:10px;border:1px solid var(--border);background:rgba(26,10,10,0.8);color:var(--white);font-size:13px;font-family:'DM Sans',sans-serif;outline:none;}
   .form-input:focus{border-color:var(--gold);}
-  .form-select{width:100%;padding:9px 11px;border-radius:10px;border:1px solid var(--border);background:rgba(26,10,10,0.8);color:var(--white);font-size:13px;font-family:'DM Sans',sans-serif;outline:none;appearance:none;}
+  .form-select{width:100%;padding:9px 11px;border-radius:10px;border:1px solid var(--border);background:rgba(26,10,10,0.8);color:var(--white);font-size:13px;font-family:'DM Sans',sans-serif;outline:none;}
   .add-btn{width:100%;padding:11px;border-radius:10px;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border:1px solid rgba(201,168,76,0.3);color:var(--gold);font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:4px;}
   .booking-list-item{padding:11px 13px;border-radius:10px;background:var(--dark-card);border:1px solid var(--border);margin-bottom:7px;}
   .booking-vehicle{font-size:13px;font-weight:600;color:var(--off-white);margin-bottom:3px;}
@@ -144,6 +141,7 @@
   .booking-actions{display:flex;gap:6px;margin-top:8px;}
   .del-btn{padding:4px 10px;border-radius:6px;background:rgba(124,42,42,0.2);border:1px solid rgba(124,42,42,0.3);color:#E07070;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;}
   .no-bookings{text-align:center;padding:30px;color:var(--muted);font-size:13px;}
+  .clear-all-btn{width:100%;padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(124,42,42,0.3);color:#E07070;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;margin-bottom:12px;}
 
   /* QUICK TAB */
   .quick-btn{width:100%;padding:11px 13px;border-radius:10px;background:rgba(123,28,28,0.15);border:1px solid var(--border);color:var(--off-white);cursor:pointer;font-size:13px;text-align:left;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:10px;margin-bottom:7px;}
@@ -162,7 +160,6 @@
   .setup-btn:disabled{opacity:0.6;cursor:not-allowed;}
   .setup-hint{font-size:11px;color:var(--muted);text-align:center;margin-top:14px;line-height:1.8;}
   .setup-hint a{color:var(--gold);text-decoration:none;}
-
   @keyframes glow{0%,100%{box-shadow:0 0 18px rgba(201,168,76,0.1);}50%{box-shadow:0 0 28px rgba(201,168,76,0.25);}}
   @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.5;}}
   @keyframes typing{0%,100%{opacity:0.3;transform:translateY(0);}50%{opacity:1;transform:translateY(-4px);}}
@@ -182,21 +179,16 @@
   <button class="setup-btn" id="activateBtn" onclick="saveKey()">Activate Assistant →</button>
   <div class="setup-hint">
     Get your key at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a><br>
-    → API Keys → Create Key<br><br>
-    Saved only in this browser.
+    → API Keys → Create Key · Saved in this browser only.
   </div>
 </div>
 
 <!-- APP -->
 <div id="app" style="display:none;flex-direction:column;flex:1;min-height:100vh;">
-
   <div class="header">
     <div style="display:flex;align-items:center;gap:11px;">
       <div class="logo">TS</div>
-      <div>
-        <div class="brand-name">TS Rentals</div>
-        <div class="brand-sub">Business Assistant</div>
-      </div>
+      <div><div class="brand-name">TS Rentals</div><div class="brand-sub">Business Assistant</div></div>
     </div>
     <div style="display:flex;align-items:center;gap:7px;">
       <div class="live-badge"><div class="live-dot"></div>Live</div>
@@ -221,7 +213,7 @@
 
   <div class="content">
 
-    <!-- CHAT TAB -->
+    <!-- CHAT -->
     <div id="tab-chat" style="flex:1;display:flex;flex-direction:column;min-height:0;">
       <div class="chat-area" id="chatArea"></div>
       <div class="input-area">
@@ -234,84 +226,107 @@
       </div>
     </div>
 
-    <!-- AVAILABILITY TAB -->
+    <!-- AVAILABILITY -->
     <div id="tab-avail" style="display:none;flex:1;overflow:hidden;">
       <div class="scroll-area">
         <div class="avail-tab-card">
           <div class="avail-tab-title">Check Availability</div>
-          <div class="avail-tab-sub">Enter dates to see which vehicles are free.</div>
+          <div class="avail-tab-sub">Pick dates to see which vehicles are free.</div>
           <div class="date-row">
-            <div class="date-group">
-              <div class="date-label">Start Date</div>
-              <input type="date" class="date-input" id="checkStart"/>
-            </div>
-            <div class="date-group">
-              <div class="date-label">End Date</div>
-              <input type="date" class="date-input" id="checkEnd"/>
-            </div>
+            <div class="date-group"><div class="date-label">Start Date</div><input type="date" class="date-input" id="checkStart"/></div>
+            <div class="date-group"><div class="date-label">End Date</div><input type="date" class="date-input" id="checkEnd"/></div>
           </div>
-          <button class="check-btn" onclick="runAvailabilityCheck()">Check Availability</button>
-          <div class="avail-error" id="availError"></div>
+          <button class="check-btn" onclick="runAvailCheck()">Check Availability</button>
+          <div class="form-error" id="availError"></div>
         </div>
         <div id="availResults"></div>
       </div>
     </div>
 
-    <!-- BOOKINGS TAB -->
+    <!-- BOOKINGS -->
     <div id="tab-bookings" style="display:none;flex:1;overflow:hidden;">
       <div class="scroll-area">
-        <div class="booking-form">
-          <div class="form-title">Add Booking</div>
-          <div class="form-group">
-            <label class="form-label">Vehicle</label>
-            <select class="form-select" id="bVehicle"></select>
-          </div>
-          <div class="date-row">
-            <div class="date-group">
-              <div class="date-label">Start Date</div>
-              <input type="date" class="form-input" id="bStart"/>
-            </div>
-            <div class="date-group">
-              <div class="date-label">End Date</div>
-              <input type="date" class="form-input" id="bEnd"/>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Customer Name</label>
-            <input type="text" class="form-input" id="bCustomer" placeholder="e.g. John Smith"/>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Status</label>
-            <select class="form-select" id="bStatus">
-              <option value="confirmed">Confirmed</option>
-              <option value="pending">Pending</option>
-            </select>
-          </div>
-          <div class="avail-error" id="bookingError"></div>
-          <button class="add-btn" onclick="addBooking()">Add Booking</button>
+        <div class="booking-tabs">
+          <button class="booking-tab-btn active" id="btab-import" onclick="setBTab('import',this)">📥 Import</button>
+          <button class="booking-tab-btn" id="btab-manual" onclick="setBTab('manual',this)">➕ Manual</button>
+          <button class="booking-tab-btn" id="btab-list" onclick="setBTab('list',this)">📋 List</button>
         </div>
-        <div class="section-title">Active Bookings</div>
-        <div id="bookingList"></div>
+
+        <!-- IMPORT PANEL -->
+        <div id="bpanel-import">
+          <div class="import-card">
+            <div class="import-title">Bulk Import Bookings</div>
+            <div class="import-sub">Paste your bookings in this format — one per line:</div>
+            <div class="import-format">
+              VehicleName DD-DD [CustomerName]<br>
+              Examples:<br>
+              GLC 8-18 John Smith<br>
+              Axio 3-13<br>
+              Corolla 13-21 Sarah Jones
+            </div>
+            <div class="date-label" style="margin-bottom:6px;">Month & Year for these bookings</div>
+            <div class="date-row" style="margin-bottom:12px;">
+              <div class="date-group">
+                <select class="date-input" id="importMonth">
+                  <option value="1">January</option><option value="2">February</option>
+                  <option value="3">March</option><option value="4" selected>April</option>
+                  <option value="5">May</option><option value="6">June</option>
+                  <option value="7">July</option><option value="8">August</option>
+                  <option value="9">September</option><option value="10">October</option>
+                  <option value="11">November</option><option value="12">December</option>
+                </select>
+              </div>
+              <div class="date-group">
+                <input type="number" class="date-input" id="importYear" value="2026" min="2024" max="2030"/>
+              </div>
+            </div>
+            <textarea class="import-textarea" id="importText" placeholder="Paste your bookings here...&#10;GLC 8-18&#10;Axio 3-13 Customer Name&#10;Corolla 3-12"></textarea>
+            <div id="importPreview" class="import-preview" style="display:none;"></div>
+            <button class="import-btn" onclick="previewImport()" id="previewBtn">Preview Import</button>
+            <button class="import-btn" onclick="confirmImport()" id="confirmImportBtn" style="display:none;background:linear-gradient(135deg,#2A5C3A,#1A3C2A);margin-top:8px;">✓ Confirm & Import All</button>
+            <div class="form-error" id="importError"></div>
+          </div>
+          <button class="import-btn" onclick="loadAprilBookings()" style="background:rgba(123,28,28,0.3);border:1px solid var(--border);margin-bottom:10px;">📅 Load April 2026 Bookings</button>
+        </div>
+
+        <!-- MANUAL PANEL -->
+        <div id="bpanel-manual" style="display:none;">
+          <div class="booking-form">
+            <div class="form-title">Add Single Booking</div>
+            <div class="form-group"><label class="form-label">Vehicle</label><select class="form-select" id="bVehicle"></select></div>
+            <div class="date-row">
+              <div class="date-group"><div class="date-label">Start</div><input type="date" class="form-input" id="bStart"/></div>
+              <div class="date-group"><div class="date-label">End</div><input type="date" class="form-input" id="bEnd"/></div>
+            </div>
+            <div class="form-group"><label class="form-label">Customer Name</label><input type="text" class="form-input" id="bCustomer" placeholder="e.g. John Smith"/></div>
+            <div class="form-error" id="bookingError"></div>
+            <button class="add-btn" onclick="addBooking()">Add Booking</button>
+          </div>
+        </div>
+
+        <!-- LIST PANEL -->
+        <div id="bpanel-list" style="display:none;">
+          <button class="clear-all-btn" onclick="clearAllBookings()">🗑 Clear All Bookings</button>
+          <div id="bookingList"></div>
+        </div>
       </div>
     </div>
 
-    <!-- FLEET TAB -->
+    <!-- FLEET -->
     <div id="tab-fleet" style="display:none;flex:1;overflow:hidden;">
       <div class="scroll-area">
         <div class="section-title">Fleet & Daily Pricing</div>
         <div id="fleetList"></div>
         <div class="rules-box">
           <strong style="color:var(--gold);">Business Rules</strong><br>
-          • Minimum rental: 3 days<br>
-          • 25% deposit secures your vehicle<br>
+          • Minimum rental: 3 days · 25% deposit secures vehicle<br>
           • Airport pickup: FREE (Kingston) — fee for MBJ<br>
-          • Island-wide delivery available<br>
-          • Bookings via WhatsApp
+          • Island-wide delivery available · Bookings via WhatsApp
         </div>
       </div>
     </div>
 
-    <!-- QUICK TAB -->
+    <!-- QUICK -->
     <div id="tab-quick" style="display:none;flex:1;overflow:hidden;">
       <div class="scroll-area">
         <div class="section-title">Quick Actions</div>
@@ -323,81 +338,184 @@
 </div>
 
 <script>
-// ─── STATE ───────────────────────────────────────────────────────────────────
-var apiKey='', currentMode='customer', isLoading=false;
+// ── STATE ────────────────────────────────────────────────────────────────────
+var apiKey='',currentMode='customer',isLoading=false;
 var histories={customer:[],internal:[],marketing:[],research:[]};
+var pendingImport=[];
 
-// ─── FLEET DATA ───────────────────────────────────────────────────────────────
+// ── FLEET ────────────────────────────────────────────────────────────────────
 var FLEET=[
-  {id:'axio',name:'Toyota Axio',cat:'Economy',price:8000,color:'#4A7C59'},
-  {id:'sylphy',name:'Nissan Sylphy',cat:'Economy',price:8000,color:'#4A7C59'},
-  {id:'corolla',name:'Toyota Corolla',cat:'Standard',price:9000,color:'#4A6C7C'},
-  {id:'stream',name:'Honda Stream',cat:'Standard',price:9000,color:'#4A6C7C'},
-  {id:'markx',name:'Mark X',cat:'Executive',price:15000,color:'#7C6A4A'},
-  {id:'a6',name:'Audi A6',cat:'Premium',price:20000,color:'#7C4A6A'},
-  {id:'jaguar',name:'Jaguar XF',cat:'Luxury',price:25000,color:'#9B2C2C'},
-  {id:'c300',name:'Mercedes C300h',cat:'Luxury',price:25000,color:'#9B2C2C'},
-  {id:'glc',name:'Mercedes GLC',cat:'Luxury SUV',price:35000,color:'#7B1C1C'},
-  {id:'gle',name:'Mercedes GLE',cat:'Ultra Premium',price:80000,color:'#C9A84C'},
-  {id:'porsche',name:'Porsche Macan GTS',cat:'Ultra Premium',price:80000,color:'#C9A84C'},
+  {id:'axio',name:'Toyota Axio',cat:'Economy',price:8000,color:'#4A7C59',aliases:['axio','toyota axio']},
+  {id:'sylphy',name:'Nissan Sylphy',cat:'Economy',price:8000,color:'#4A7C59',aliases:['sylphy','nissan sylphy']},
+  {id:'corolla',name:'Toyota Corolla',cat:'Standard',price:9000,color:'#4A6C7C',aliases:['corolla','toyota corolla']},
+  {id:'stream',name:'Honda Stream',cat:'Standard',price:9000,color:'#4A6C7C',aliases:['stream','honda stream']},
+  {id:'markx',name:'Mark X',cat:'Executive',price:15000,color:'#7C6A4A',aliases:['markx','mark x','mark-x','markx']},
+  {id:'a6',name:'Audi A6',cat:'Premium',price:20000,color:'#7C4A6A',aliases:['a6','audi a6','audi']},
+  {id:'jaguar',name:'Jaguar XF',cat:'Luxury',price:25000,color:'#9B2C2C',aliases:['jaguar','jaguar xf','jag']},
+  {id:'c300',name:'Mercedes C300h',cat:'Luxury',price:25000,color:'#9B2C2C',aliases:['c300','c300h','mercedes c300','benz c300']},
+  {id:'glc',name:'Mercedes GLC',cat:'Luxury SUV',price:35000,color:'#7B1C1C',aliases:['glc','mercedes glc','benz glc']},
+  {id:'gle',name:'Mercedes GLE',cat:'Ultra Premium',price:80000,color:'#C9A84C',aliases:['gle','mercedes gle','benz gle']},
+  {id:'porsche',name:'Porsche Macan GTS',cat:'Ultra Premium',price:80000,color:'#C9A84C',aliases:['porsche','macan','porsche macan','macan gts']},
 ];
 
-// ─── BOOKINGS STORAGE ─────────────────────────────────────────────────────────
-function getBookings(){
-  try{return JSON.parse(localStorage.getItem('ts_bookings')||'[]');}catch(e){return[];}
+// ── APRIL 2026 BOOKINGS ──────────────────────────────────────────────────────
+var APRIL_BOOKINGS=[
+  {vehicleId:'glc',startDate:'2026-04-08',endDate:'2026-04-18',customer:'Customer',status:'confirmed'},
+  {vehicleId:'axio',startDate:'2026-04-03',endDate:'2026-04-13',customer:'Customer',status:'confirmed'},
+  {vehicleId:'corolla',startDate:'2026-04-03',endDate:'2026-04-12',customer:'Customer',status:'confirmed'},
+  {vehicleId:'markx',startDate:'2026-04-02',endDate:'2026-04-07',customer:'Customer',status:'confirmed'},
+  {vehicleId:'corolla',startDate:'2026-03-31',endDate:'2026-04-02',customer:'Customer',status:'confirmed'},
+  {vehicleId:'axio',startDate:'2026-04-29',endDate:'2026-05-01',customer:'Customer',status:'confirmed'},
+  {vehicleId:'sylphy',startDate:'2026-04-04',endDate:'2026-04-07',customer:'Customer',status:'confirmed'},
+  {vehicleId:'sylphy',startDate:'2026-04-07',endDate:'2026-04-11',customer:'Customer',status:'confirmed'},
+  {vehicleId:'markx',startDate:'2026-04-10',endDate:'2026-04-19',customer:'Customer',status:'confirmed'},
+  {vehicleId:'markx',startDate:'2026-04-19',endDate:'2026-04-28',customer:'Customer',status:'confirmed'},
+  {vehicleId:'axio',startDate:'2026-04-16',endDate:'2026-04-19',customer:'Customer',status:'confirmed'},
+  {vehicleId:'axio',startDate:'2026-04-26',endDate:'2026-05-04',customer:'Customer',status:'confirmed'},
+  {vehicleId:'stream',startDate:'2026-04-23',endDate:'2026-04-27',customer:'Customer',status:'confirmed'},
+  {vehicleId:'sylphy',startDate:'2026-04-11',endDate:'2026-04-14',customer:'Customer',status:'confirmed'},
+  {vehicleId:'corolla',startDate:'2026-04-13',endDate:'2026-04-21',customer:'Customer',status:'confirmed'},
+  {vehicleId:'stream',startDate:'2026-04-17',endDate:'2026-04-20',customer:'Customer',status:'confirmed'},
+  {vehicleId:'sylphy',startDate:'2026-04-16',endDate:'2026-04-19',customer:'Customer',status:'confirmed'},
+];
+
+function loadAprilBookings(){
+  if(!confirm('This will add all 17 April 2026 bookings. Continue?'))return;
+  var existing=getBookings();
+  var added=0;
+  APRIL_BOOKINGS.forEach(function(b){
+    var conflict=existing.find(function(e){return e.vehicleId===b.vehicleId&&hasConflict(e,b.startDate,b.endDate);});
+    if(!conflict){
+      existing.push(Object.assign({},b,{id:'bk_'+Date.now()+'_'+Math.random().toString(36).substr(2,5)}));
+      added++;
+    }
+  });
+  saveBookings(existing);
+  renderBookingList();
+  setBTab('list',document.getElementById('btab-list'));
+  alert('✓ '+added+' April bookings loaded successfully!');
 }
+
+// ── BOOKING STORAGE ──────────────────────────────────────────────────────────
+function getBookings(){try{return JSON.parse(localStorage.getItem('ts_bookings')||'[]');}catch(e){return[];}}
 function saveBookings(b){localStorage.setItem('ts_bookings',JSON.stringify(b));}
 
-// ─── AVAILABILITY LOGIC ───────────────────────────────────────────────────────
-// A vehicle is UNAVAILABLE if:
-// existing_start < requested_end AND existing_end > requested_start
-function hasConflict(booking, reqStart, reqEnd){
-  if(booking.status==='cancelled') return false;
-  var bStart=new Date(booking.startDate);
-  var bEnd=new Date(booking.endDate);
-  var rStart=new Date(reqStart);
-  var rEnd=new Date(reqEnd);
-  return bStart < rEnd && bEnd > rStart;
+// ── CONFLICT LOGIC ───────────────────────────────────────────────────────────
+function hasConflict(booking,reqStart,reqEnd){
+  if(booking.status==='cancelled')return false;
+  return new Date(booking.startDate)<new Date(reqEnd)&&new Date(booking.endDate)>new Date(reqStart);
 }
 
-function checkAvailability(reqStart, reqEnd){
+function checkAvailability(reqStart,reqEnd){
   var bookings=getBookings();
   var result={available:[],unavailable:[],startDate:reqStart,endDate:reqEnd};
   FLEET.forEach(function(v){
-    var conflicts=bookings.filter(function(b){
-      return b.vehicleId===v.id && hasConflict(b,reqStart,reqEnd);
-    });
-    if(conflicts.length>0){
-      result.unavailable.push({vehicle:v,booking:conflicts[0]});
-    } else {
-      result.available.push({vehicle:v});
-    }
+    var conflicts=bookings.filter(function(b){return b.vehicleId===v.id&&hasConflict(b,reqStart,reqEnd);});
+    if(conflicts.length>0){result.unavailable.push({vehicle:v,booking:conflicts[0]});}
+    else{result.available.push({vehicle:v});}
   });
   return result;
 }
 
-function getDayCount(start,end){
-  var s=new Date(start), e=new Date(end);
-  return Math.round((e-s)/(1000*60*60*24));
+function getDays(s,e){return Math.round((new Date(e)-new Date(s))/(864e5));}
+function fmtDate(d){return new Date(d+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}
+
+// ── VEHICLE MATCHER ──────────────────────────────────────────────────────────
+function matchVehicle(name){
+  var n=name.toLowerCase().trim().replace(/\s+/g,' ');
+  for(var i=0;i<FLEET.length;i++){
+    var v=FLEET[i];
+    for(var j=0;j<v.aliases.length;j++){
+      if(n===v.aliases[j]||n.includes(v.aliases[j])||v.aliases[j].includes(n)){return v;}
+    }
+  }
+  return null;
 }
 
-function formatDate(d){
-  var dt=new Date(d+'T00:00:00');
-  return dt.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+// ── BULK IMPORT PARSER ───────────────────────────────────────────────────────
+function parseImportLine(line,month,year){
+  line=line.trim();
+  if(!line)return null;
+  // Match: VehicleName DD-DD [optional customer]
+  var match=line.match(/^(.+?)\s+(\d{1,2})[-\/](\d{1,2})\s*(.*)$/);
+  if(!match)return{error:'Could not parse: "'+line+'"'};
+  var vName=match[1].trim();
+  var d1=parseInt(match[2]);
+  var d2=parseInt(match[3]);
+  var customer=match[4].trim()||'Customer';
+  var vehicle=matchVehicle(vName);
+  if(!vehicle)return{error:'Unknown vehicle: "'+vName+'"'};
+  // Handle cross-month (e.g. end date in next month)
+  var startDate=year+'-'+String(month).padStart(2,'0')+'-'+String(d1).padStart(2,'0');
+  var endMonth=month, endYear=year;
+  if(d2<d1){endMonth=month+1;if(endMonth>12){endMonth=1;endYear=year+1;}}
+  var endDate=endYear+'-'+String(endMonth).padStart(2,'0')+'-'+String(d2).padStart(2,'0');
+  // Validate
+  if(new Date(endDate)<=new Date(startDate))return{error:'End before start: "'+line+'"'};
+  return{vehicle:vehicle,startDate:startDate,endDate:endDate,customer:customer,ok:true};
 }
 
-// ─── AVAILABILITY CHECKER UI ──────────────────────────────────────────────────
-function runAvailabilityCheck(){
+function previewImport(){
+  var text=document.getElementById('importText').value.trim();
+  var month=parseInt(document.getElementById('importMonth').value);
+  var year=parseInt(document.getElementById('importYear').value);
+  var err=document.getElementById('importError');
+  err.textContent='';
+  if(!text){err.textContent='Please paste your bookings first.';return;}
+  var lines=text.split('\n').filter(function(l){return l.trim();});
+  pendingImport=[];
+  var previewHtml='<div class="import-preview-title">Preview ('+lines.length+' lines)</div>';
+  var okCount=0,errCount=0;
+  lines.forEach(function(line){
+    var parsed=parseImportLine(line,month,year);
+    if(!parsed)return;
+    if(parsed.error){
+      previewHtml+='<div class="preview-item err">✗ '+parsed.error+'</div>';
+      errCount++;
+    } else {
+      previewHtml+='<div class="preview-item">✓ '+parsed.vehicle.name+' · '+fmtDate(parsed.startDate)+' → '+fmtDate(parsed.endDate)+(parsed.customer&&parsed.customer!=='Customer'?' · '+parsed.customer:'')+'</div>';
+      pendingImport.push(parsed);
+      okCount++;
+    }
+  });
+  previewHtml+='<div style="margin-top:8px;font-size:11px;color:var(--muted);">'+okCount+' valid · '+errCount+' errors</div>';
+  var prev=document.getElementById('importPreview');
+  prev.innerHTML=previewHtml;prev.style.display='block';
+  document.getElementById('confirmImportBtn').style.display=okCount>0?'block':'none';
+}
+
+function confirmImport(){
+  if(!pendingImport.length)return;
+  var existing=getBookings();
+  var added=0,skipped=0;
+  pendingImport.forEach(function(item){
+    var conflict=existing.find(function(e){return e.vehicleId===item.vehicle.id&&hasConflict(e,item.startDate,item.endDate);});
+    if(conflict){skipped++;return;}
+    existing.push({id:'bk_'+Date.now()+'_'+Math.random().toString(36).substr(2,5),vehicleId:item.vehicle.id,startDate:item.startDate,endDate:item.endDate,customer:item.customer,status:'confirmed',createdAt:new Date().toISOString()});
+    added++;
+  });
+  saveBookings(existing);
+  pendingImport=[];
+  document.getElementById('importText').value='';
+  document.getElementById('importPreview').style.display='none';
+  document.getElementById('confirmImportBtn').style.display='none';
+  var res=document.getElementById('importError');
+  res.style.color='#6EBB8A';
+  res.textContent='✓ '+added+' bookings imported. '+skipped+' skipped (conflicts).';
+  setTimeout(function(){setBTab('list',document.getElementById('btab-list'));},1200);
+}
+
+// ── AVAILABILITY CHECK UI ────────────────────────────────────────────────────
+function runAvailCheck(){
   var start=document.getElementById('checkStart').value;
   var end=document.getElementById('checkEnd').value;
   var err=document.getElementById('availError');
   err.textContent='';
   if(!start||!end){err.textContent='Please select both dates.';return;}
-  var s=new Date(start), e=new Date(end), today=new Date();
-  today.setHours(0,0,0,0);
-  if(s<today){err.textContent='Start date cannot be in the past.';return;}
-  if(e<=s){err.textContent='End date must be after start date.';return;}
-  var days=getDayCount(start,end);
+  var today=new Date();today.setHours(0,0,0,0);
+  if(new Date(start)<today){err.textContent='Start date cannot be in the past.';return;}
+  if(new Date(end)<=new Date(start)){err.textContent='End date must be after start date.';return;}
+  var days=getDays(start,end);
   if(days<3){err.textContent='Minimum rental is 3 days.';return;}
   var res=checkAvailability(start,end);
   renderAvailResults(res,days);
@@ -405,51 +523,28 @@ function runAvailabilityCheck(){
 
 function renderAvailResults(res,days){
   var el=document.getElementById('availResults');
-  var html='<div class="result-header">Results for <strong style="color:var(--white)">'+formatDate(res.startDate)+' → '+formatDate(res.endDate)+'</strong> ('+days+' days)</div>';
-
-  if(res.available.length>0){
-    html+='<div style="font-size:10px;color:#6EBB8A;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:7px;">✓ Available ('+res.available.length+')</div>';
+  var html='<div class="result-header">'+fmtDate(res.startDate)+' → '+fmtDate(res.endDate)+' · '+days+' days</div>';
+  if(res.available.length){
+    html+='<div style="font-size:10px;color:#6EBB8A;text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px;">✓ Available ('+res.available.length+')</div>';
     res.available.forEach(function(item){
       var total=(item.vehicle.price*days).toLocaleString();
-      html+='<div class="result-item av">'+
-        '<div><div class="result-name">'+item.vehicle.name+'</div><div class="result-cat">'+item.vehicle.cat+'</div></div>'+
-        '<div class="result-right">'+
-          '<div class="result-price">J$'+item.vehicle.price.toLocaleString()+'/day</div>'+
-          '<div class="result-total">J$'+total+' total</div>'+
-          '<div class="result-status green">✓ Available</div>'+
-        '</div>'+
-      '</div>';
+      html+='<div class="result-item av"><div><div class="result-name">'+item.vehicle.name+'</div><div class="result-cat">'+item.vehicle.cat+'</div></div><div class="result-right"><div class="result-price">J$'+item.vehicle.price.toLocaleString()+'/day</div><div class="result-total">J$'+total+' total</div><div class="result-status green">✓ Free</div></div></div>';
     });
   }
-
-  if(res.unavailable.length>0){
-    html+='<div style="font-size:10px;color:#E07070;text-transform:uppercase;letter-spacing:0.08em;margin:10px 0 7px;">✗ Unavailable ('+res.unavailable.length+')</div>';
+  if(res.unavailable.length){
+    html+='<div style="font-size:10px;color:#E07070;text-transform:uppercase;letter-spacing:.08em;margin:10px 0 7px;">✗ Unavailable ('+res.unavailable.length+')</div>';
     res.unavailable.forEach(function(item){
-      html+='<div class="result-item un">'+
-        '<div><div class="result-name">'+item.vehicle.name+'</div><div class="result-cat">Booked: '+formatDate(item.booking.startDate)+' – '+formatDate(item.booking.endDate)+'</div></div>'+
-        '<div class="result-right"><div class="result-status red">✗ Booked</div></div>'+
-      '</div>';
+      html+='<div class="result-item un"><div><div class="result-name">'+item.vehicle.name+'</div><div class="result-cat">Booked '+fmtDate(item.booking.startDate)+' – '+fmtDate(item.booking.endDate)+'</div></div><div class="result-right"><div class="result-status red">✗ Booked</div></div></div>';
     });
   }
-
-  html+='<div class="summary-box">'+
-    res.available.length+' of '+FLEET.length+' vehicles available · '+days+' day rental<br>'+
-    'Minimum 3 days · 25% deposit to secure<br>'+
-    'Book via WhatsApp to confirm</div>';
-
+  html+='<div class="summary-box">'+res.available.length+'/'+FLEET.length+' available · '+days+' days · 25% deposit to confirm · Book via WhatsApp</div>';
   el.innerHTML=html;
 }
 
-// ─── BOOKINGS MANAGER ─────────────────────────────────────────────────────────
+// ── MANUAL BOOKING ───────────────────────────────────────────────────────────
 function populateVehicleSelect(){
-  var sel=document.getElementById('bVehicle');
-  sel.innerHTML='';
-  FLEET.forEach(function(v){
-    var opt=document.createElement('option');
-    opt.value=v.id;
-    opt.textContent=v.name+' — J$'+v.price.toLocaleString()+'/day';
-    sel.appendChild(opt);
-  });
+  var sel=document.getElementById('bVehicle');sel.innerHTML='';
+  FLEET.forEach(function(v){var o=document.createElement('option');o.value=v.id;o.textContent=v.name+' — J$'+v.price.toLocaleString()+'/day';sel.appendChild(o);});
 }
 
 function addBooking(){
@@ -457,113 +552,75 @@ function addBooking(){
   var start=document.getElementById('bStart').value;
   var end=document.getElementById('bEnd').value;
   var customer=document.getElementById('bCustomer').value.trim();
-  var status=document.getElementById('bStatus').value;
-  var err=document.getElementById('bookingError');
-  err.textContent='';
-
+  var err=document.getElementById('bookingError');err.textContent='';
   if(!start||!end){err.textContent='Please select both dates.';return;}
   if(new Date(end)<=new Date(start)){err.textContent='End date must be after start date.';return;}
-  if(getDayCount(start,end)<3){err.textContent='Minimum rental is 3 days.';return;}
+  if(getDays(start,end)<3){err.textContent='Minimum rental is 3 days.';return;}
   if(!customer){err.textContent='Please enter a customer name.';return;}
-
-  // Check for conflicts
   var existing=getBookings();
-  var conflict=existing.find(function(b){
-    return b.vehicleId===vid && hasConflict(b,start,end);
-  });
-  if(conflict){
-    var vName=FLEET.find(function(v){return v.id===vid;}).name;
-    err.textContent=vName+' is already booked for those dates.';
-    return;
-  }
-
-  var booking={
-    id:'bk_'+Date.now(),
-    vehicleId:vid,
-    startDate:start,
-    endDate:end,
-    customer:customer,
-    status:status,
-    createdAt:new Date().toISOString()
-  };
-  existing.push(booking);
+  var conflict=existing.find(function(b){return b.vehicleId===vid&&hasConflict(b,start,end);});
+  if(conflict){err.textContent=FLEET.find(function(v){return v.id===vid;}).name+' is already booked for those dates.';return;}
+  existing.push({id:'bk_'+Date.now(),vehicleId:vid,startDate:start,endDate:end,customer:customer,status:'confirmed',createdAt:new Date().toISOString()});
   saveBookings(existing);
-
-  // Clear form
-  document.getElementById('bStart').value='';
-  document.getElementById('bEnd').value='';
-  document.getElementById('bCustomer').value='';
-
+  document.getElementById('bStart').value='';document.getElementById('bEnd').value='';document.getElementById('bCustomer').value='';
   renderBookingList();
+  setBTab('list',document.getElementById('btab-list'));
 }
 
 function deleteBooking(id){
   if(!confirm('Remove this booking?'))return;
-  var bookings=getBookings().filter(function(b){return b.id!==id;});
-  saveBookings(bookings);
+  saveBookings(getBookings().filter(function(b){return b.id!==id;}));
   renderBookingList();
+}
+
+function clearAllBookings(){
+  if(!confirm('Clear ALL bookings? This cannot be undone.'))return;
+  saveBookings([]);renderBookingList();
 }
 
 function renderBookingList(){
   var el=document.getElementById('bookingList');
   var bookings=getBookings().filter(function(b){return b.status!=='cancelled';});
-  if(!bookings.length){
-    el.innerHTML='<div class="no-bookings">No active bookings yet.</div>';
-    return;
-  }
+  if(!bookings.length){el.innerHTML='<div class="no-bookings">No bookings yet. Import or add manually.</div>';return;}
   bookings.sort(function(a,b){return new Date(a.startDate)-new Date(b.startDate);});
   el.innerHTML='';
   bookings.forEach(function(b){
     var v=FLEET.find(function(f){return f.id===b.vehicleId;})||{name:'Unknown'};
-    var days=getDayCount(b.startDate,b.endDate);
-    var div=document.createElement('div');
-    div.className='booking-list-item';
-    div.innerHTML=
-      '<div class="booking-vehicle">'+v.name+'</div>'+
-      '<div class="booking-dates">'+formatDate(b.startDate)+' → '+formatDate(b.endDate)+' ('+days+' days)</div>'+
-      '<div class="booking-customer">'+b.customer+' · '+b.status+'</div>'+
-      '<div class="booking-actions">'+
-        '<button class="del-btn" onclick="deleteBooking(\''+b.id+'\')">Remove</button>'+
-      '</div>';
+    var days=getDays(b.startDate,b.endDate);
+    var div=document.createElement('div');div.className='booking-list-item';
+    div.innerHTML='<div class="booking-vehicle">'+v.name+'</div><div class="booking-dates">'+fmtDate(b.startDate)+' → '+fmtDate(b.endDate)+' ('+days+' days)</div><div class="booking-customer">'+b.customer+'</div><div class="booking-actions"><button class="del-btn" onclick="deleteBooking(\''+b.id+'\')">Remove</button></div>';
     el.appendChild(div);
   });
 }
 
-// ─── AVAILABILITY CONTEXT FOR AI ─────────────────────────────────────────────
-function getAvailabilityContext(){
+// ── AI CONTEXT ───────────────────────────────────────────────────────────────
+function getAvailContext(){
   var bookings=getBookings().filter(function(b){return b.status!=='cancelled';});
-  if(!bookings.length) return 'No current bookings in the system.';
-  var lines=bookings.map(function(b){
+  if(!bookings.length)return'No current bookings in system.';
+  return'Current active bookings:\n'+bookings.map(function(b){
     var v=FLEET.find(function(f){return f.id===b.vehicleId;});
-    return (v?v.name:'Unknown')+': '+b.startDate+' to '+b.endDate+' ('+b.customer+')';
-  });
-  return 'Current bookings:\n'+lines.join('\n');
+    return(v?v.name:'Unknown')+': '+b.startDate+' to '+b.endDate+' ('+b.customer+')';
+  }).join('\n');
 }
 
-// ─── DATE EXTRACTION FROM USER MESSAGE ───────────────────────────────────────
-function extractDatesFromMessage(msg){
-  // Match patterns like "May 10 to May 15", "2025-05-10", "June 1-7" etc.
-  var isoPattern=/(\d{4}-\d{2}-\d{2})/g;
-  var isoMatches=msg.match(isoPattern);
-  if(isoMatches&&isoMatches.length>=2){
-    return{start:isoMatches[0],end:isoMatches[1]};
-  }
+function extractDates(msg){
+  var m=msg.match(/(\d{4}-\d{2}-\d{2})/g);
+  if(m&&m.length>=2)return{start:m[0],end:m[1]};
   return null;
 }
 
-function isAvailabilityQuery(msg){
-  var keywords=['available','availability','book','rent','free','vacant','open','dates','from','to','between'];
-  var lower=msg.toLowerCase();
-  return keywords.some(function(k){return lower.includes(k);}) &&
-    (lower.includes('date') || /\d/.test(msg) || lower.includes('when') || lower.includes('which'));
+function isAvailQuery(msg){
+  var kw=['available','availability','book','rent','free','open','vacant'];
+  var l=msg.toLowerCase();
+  return kw.some(function(k){return l.includes(k);})&&/\d/.test(msg);
 }
 
-// ─── QUICK ACTIONS ───────────────────────────────────────────────────────────
+// ── QUICK ACTIONS ────────────────────────────────────────────────────────────
 var QUICK={
-  customer:['What cars are available May 10 to May 15?','Airport pickup from MBJ','How does the deposit work?','Pricing for the Mercedes GLC','Island-wide delivery question'],
-  internal:['Suggest pricing for peak season','Which vehicles drive most revenue?','Upsell script for economy bookings','Follow-up strategy for cold leads','Best closing lines for hesitant customers'],
+  customer:['What cars are available Apr 22 to Apr 27?','Airport pickup from MBJ','How does the deposit work?','Pricing for the Mercedes GLC','Island-wide delivery question'],
+  internal:['Summarise April bookings revenue','Which vehicles are most booked?','Upsell script for economy bookings','Follow-up strategy for cold leads','Peak season pricing suggestions'],
   marketing:['Instagram caption for the Porsche','Google Ad for airport pickup','Campaign for diaspora travellers','TikTok hook for premium fleet','WhatsApp blast for holiday weekend'],
-  research:['Jamaica events driving rental demand','Peak tourism periods 2025','Best months for premium vehicles','Carnival & festival demand windows','Competitor pricing strategy tips'],
+  research:['Jamaica events driving rental demand','Peak tourism periods 2026','Best months for premium vehicles','Carnival & festival demand windows','Competitor pricing strategy tips'],
 };
 
 var META={
@@ -574,56 +631,39 @@ var META={
 };
 
 var PROMPTS={
-customer:'You are the customer-facing assistant for TS Rentals & Recovery, a premium Jamaica-based car rental company.\n\nBrand voice: Premium, smooth, confident, conversion-focused.\n\nFleet & Pricing (per day JMD):\nToyota Axio $8,000 | Nissan Sylphy $8,000 | Toyota Corolla $9,000 | Honda Stream $9,000\nMark X $15,000 | Audi A6 $20,000 | Jaguar XF $25,000 | Mercedes C300h $25,000\nMercedes GLC $35,000 | Mercedes GLE $80,000 | Porsche Macan GTS $80,000\n\nMinimum 3 days. 25% deposit secures vehicle. Airport pickup FREE Kingston, fee for Montego Bay. Island-wide delivery available.\n\nWhen a customer asks about availability for specific dates, use the booking data provided to give accurate answers. List available vehicles clearly with prices. Always end with a CTA toward WhatsApp booking.',
-internal:'You are the internal business assistant for TS Rentals & Recovery. Help the owner make smarter revenue decisions.\n\nFleet (JMD/day): Economy $8-9K | Executive $15K | Premium $20K | Luxury $25K | Luxury SUV $35K | Ultra $80K\n\nUse booking data to give accurate occupancy insights. Provide revenue-focused recommendations. Use bullet points. Tie everything to revenue impact.',
-marketing:'You are the marketing strategist for TS Rentals & Recovery, Jamaica. Premium. Reliable. No stress.\n\nCreate Instagram/TikTok captions, Google/Meta ads, WhatsApp blasts. CTA: wa.me/18761234567. Keep everything punchy and ready to post.',
-research:'You are the market research advisor for TS Rentals & Recovery, Jamaica. Analyze demand signals for pricing and marketing decisions. Identify Jamaica events, tourism peaks, high-value opportunities. Always end with a clear business recommendation.',
+customer:'You are the customer-facing assistant for TS Rentals & Recovery, a premium Jamaica-based car rental company.\n\nBrand voice: Premium, smooth, confident, conversion-focused.\n\nFleet & Pricing (per day JMD):\nToyota Axio $8,000 | Nissan Sylphy $8,000 | Toyota Corolla $9,000 | Honda Stream $9,000\nMark X $15,000 | Audi A6 $20,000 | Jaguar XF $25,000 | Mercedes C300h $25,000\nMercedes GLC $35,000 | Mercedes GLE $80,000 | Porsche Macan GTS $80,000\n\nMinimum 3 days. 25% deposit secures vehicle. Airport pickup FREE Kingston, fee for Montego Bay. Island-wide delivery available.\n\nWhen asked about availability, use the booking data below to give accurate answers. List available vehicles with prices. Always end with a WhatsApp CTA.',
+internal:'You are the internal business assistant for TS Rentals & Recovery. Help the owner make smarter revenue decisions.\n\nFleet (JMD/day): Economy $8-9K | Executive $15K | Premium $20K | Luxury $25K | Luxury SUV $35K | Ultra $80K\n\nUse the booking data to give accurate occupancy and revenue insights. Be strategic and direct. Use bullet points. Always tie to revenue impact.',
+marketing:'You are the marketing strategist for TS Rentals & Recovery, Jamaica. Premium. Reliable. No stress.\n\nCreate Instagram/TikTok captions, Google/Meta ads, WhatsApp blasts. CTA: wa.me/18761234567. Punchy and ready to post.',
+research:'You are the market research advisor for TS Rentals & Recovery, Jamaica. Analyze demand signals. Identify Jamaica events, tourism peaks, opportunities. Always end with a clear business recommendation.',
 };
 
-// ─── SETUP & AUTH ─────────────────────────────────────────────────────────────
+// ── SETUP ────────────────────────────────────────────────────────────────────
 window.onload=function(){
   var saved=localStorage.getItem('ts_api_key');
   if(saved&&saved.startsWith('sk-')){apiKey=saved;showApp();}
-  renderFleet();
-  renderQuick();
-  populateVehicleSelect();
-  renderBookingList();
-  showEmpty();
+  renderFleet();renderQuick();populateVehicleSelect();renderBookingList();showEmpty();
 };
 
 function saveKey(){
   var val=document.getElementById('apiKeyInput').value.trim();
-  var err=document.getElementById('setupError');
-  var btn=document.getElementById('activateBtn');
+  var err=document.getElementById('setupError');var btn=document.getElementById('activateBtn');
   err.textContent='';
   if(!val){err.textContent='Please enter your API key.';return;}
   if(!val.startsWith('sk-')){err.textContent='Invalid key. Must start with sk-ant-';return;}
   btn.textContent='Connecting...';btn.disabled=true;
-  fetch('https://api.anthropic.com/v1/messages',{
-    method:'POST',
-    headers:{'Content-Type':'application/json','x-api-key':val,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-    body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:5,messages:[{role:'user',content:'Hi'}]})
-  }).then(function(r){
+  fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':val,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:5,messages:[{role:'user',content:'Hi'}]})})
+  .then(function(r){
     if(r.ok){apiKey=val;localStorage.setItem('ts_api_key',val);showApp();}
-    else{r.json().then(function(d){err.textContent=d.error&&d.error.message?d.error.message:'Key rejected. Create a new key and try again.';btn.textContent='Activate Assistant →';btn.disabled=false;}).catch(function(){err.textContent='Key rejected.';btn.textContent='Activate Assistant →';btn.disabled=false;});}
-  }).catch(function(){err.textContent='Connection error. Check internet and try again.';btn.textContent='Activate Assistant →';btn.disabled=false;});
+    else{r.json().then(function(d){err.textContent=d.error&&d.error.message?d.error.message:'Key rejected.';btn.textContent='Activate Assistant →';btn.disabled=false;}).catch(function(){err.textContent='Key rejected.';btn.textContent='Activate Assistant →';btn.disabled=false;});}
+  }).catch(function(){err.textContent='Connection error. Try again.';btn.textContent='Activate Assistant →';btn.disabled=false;});
 }
 
 function clearKey(){
-  if(confirm('Reset API key?')){
-    localStorage.removeItem('ts_api_key');apiKey='';
-    document.getElementById('app').style.display='none';
-    document.getElementById('setupOverlay').style.display='flex';
-    document.getElementById('apiKeyInput').value='';
-    document.getElementById('setupError').textContent='';
-    document.getElementById('activateBtn').textContent='Activate Assistant →';
-    document.getElementById('activateBtn').disabled=false;
-  }
+  if(confirm('Reset API key?')){localStorage.removeItem('ts_api_key');apiKey='';document.getElementById('app').style.display='none';document.getElementById('setupOverlay').style.display='flex';document.getElementById('apiKeyInput').value='';document.getElementById('setupError').textContent='';document.getElementById('activateBtn').textContent='Activate Assistant →';document.getElementById('activateBtn').disabled=false;}
 }
-
 function showApp(){document.getElementById('setupOverlay').style.display='none';document.getElementById('app').style.display='flex';}
 
-// ─── MODE & TAB ───────────────────────────────────────────────────────────────
+// ── MODE & TABS ───────────────────────────────────────────────────────────────
 function setMode(mode,btn){
   currentMode=mode;
   document.querySelectorAll('.mode-btn').forEach(function(b){b.classList.remove('active');});
@@ -636,18 +676,26 @@ function setTab(tab,btn){
   document.querySelectorAll('.tab').forEach(function(b){b.classList.remove('active');});
   btn.classList.add('active');
   ['chat','avail','bookings','fleet','quick'].forEach(function(t){
-    document.getElementById('tab-'+t).style.display=t===tab?(t==='chat'?'flex':'block'):'none';
+    var el=document.getElementById('tab-'+t);
+    el.style.display=t===tab?(t==='chat'?'flex':'block'):'none';
   });
-  if(tab==='bookings') renderBookingList();
+  if(tab==='bookings')renderBookingList();
 }
 
-// ─── EMPTY STATE & HISTORY ───────────────────────────────────────────────────
+function setBTab(tab,btn){
+  document.querySelectorAll('.booking-tab-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  ['import','manual','list'].forEach(function(t){
+    document.getElementById('bpanel-'+t).style.display=t===tab?'block':'none';
+  });
+  if(tab==='list')renderBookingList();
+}
+
+// ── CHAT ─────────────────────────────────────────────────────────────────────
 function showEmpty(){
   var area=document.getElementById('chatArea');
   var m=META[currentMode];
-  var sugs=QUICK[currentMode].slice(0,3).map(function(q){
-    return '<button class="sug-btn" onclick="sendMessage(\''+q.replace(/'/g,"\\'")+'\')">' +q+'</button>';
-  }).join('');
+  var sugs=QUICK[currentMode].slice(0,3).map(function(q){return'<button class="sug-btn" onclick="sendMessage(\''+q.replace(/'/g,"\\'")+'\')">' +q+'</button>';}).join('');
   area.innerHTML='<div class="empty-state"><div class="empty-icon">'+m.icon+'</div><div class="empty-title">'+m.title+'</div><div class="empty-desc">'+m.desc+'</div><div class="suggestions">'+sugs+'</div></div>';
   document.getElementById('clearBtn').style.display='none';
 }
@@ -657,34 +705,27 @@ function renderHistory(){
   if(!hist.length){showEmpty();return;}
   var area=document.getElementById('chatArea');area.innerHTML='';
   hist.forEach(function(m){
-    if(m.availCard){appendAvailCard(m.availCard,false);}
-    else{appendBubble(m.role,m.content,false);}
+    if(m.availCard)appendAvailCard(m.availCard,false);
+    else appendBubble(m.role,m.content,false);
   });
   document.getElementById('clearBtn').style.display='block';
   scrollBottom();
 }
 
-// ─── FLEET RENDER ─────────────────────────────────────────────────────────────
 function renderFleet(){
   var el=document.getElementById('fleetList');
-  FLEET.forEach(function(v){
-    el.innerHTML+='<div class="vehicle-card"><div><div class="v-name">'+v.name+'</div><span class="v-cat" style="color:'+v.color+';border:1px solid '+v.color+'">'+v.cat+'</span></div><div><div class="v-price">J$'+v.price.toLocaleString()+'</div><div class="v-day">per day</div></div></div>';
-  });
+  FLEET.forEach(function(v){el.innerHTML+='<div class="vehicle-card"><div><div class="v-name">'+v.name+'</div><span class="v-cat" style="color:'+v.color+';border:1px solid '+v.color+'">'+v.cat+'</span></div><div><div class="v-price">J$'+v.price.toLocaleString()+'</div><div class="v-day">per day</div></div></div>';});
 }
 
-// ─── QUICK RENDER ────────────────────────────────────────────────────────────
 function renderQuick(){
   var el=document.getElementById('quickList');el.innerHTML='';
   QUICK[currentMode].forEach(function(q){
-    var b=document.createElement('button');
-    b.className='quick-btn';
-    b.innerHTML='<span class="quick-arrow">→</span>'+q;
+    var b=document.createElement('button');b.className='quick-btn';b.innerHTML='<span class="quick-arrow">→</span>'+q;
     b.onclick=function(){setTab('chat',document.getElementById('btn-chat'));setTimeout(function(){sendMessage(q);},80);};
     el.appendChild(b);
   });
 }
 
-// ─── SEND MESSAGE ─────────────────────────────────────────────────────────────
 function handleKey(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage();}}
 
 function sendMessage(text){
@@ -698,37 +739,20 @@ function sendMessage(text){
   appendBubble('user',userText);
   document.getElementById('clearBtn').style.display='block';
   var typingEl=showTyping();
-
-  // Check if availability query with dates
-  var availCtx=getAvailabilityContext();
-  var systemPrompt=PROMPTS[currentMode]+'\n\nCurrent booking data for availability checks:\n'+availCtx;
-
-  var msgs=histories[currentMode]
-    .filter(function(m){return !m.availCard;})
-    .map(function(m){return{role:m.role,content:m.content};});
-
-  fetch('https://api.anthropic.com/v1/messages',{
-    method:'POST',
-    headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-    body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:800,system:systemPrompt,messages:msgs})
-  }).then(function(r){return r.json().then(function(d){return{ok:r.ok,data:d};});})
+  var systemPrompt=PROMPTS[currentMode]+'\n\nCurrent booking data:\n'+getAvailContext();
+  var msgs=histories[currentMode].filter(function(m){return!m.availCard;}).map(function(m){return{role:m.role,content:m.content};});
+  fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:800,system:systemPrompt,messages:msgs})})
+  .then(function(r){return r.json().then(function(d){return{ok:r.ok,data:d};});})
   .then(function(res){
     typingEl.remove();
-    var reply;
-    if(res.ok){reply=res.data.content&&res.data.content[0]?res.data.content[0].text:'No response.';}
-    else{reply=res.data.error&&res.data.error.message?res.data.error.message:'Error. Please try again.';}
+    var reply=res.ok?(res.data.content&&res.data.content[0]?res.data.content[0].text:'No response.'):(res.data.error&&res.data.error.message?res.data.error.message:'Error. Please try again.');
     histories[currentMode].push({role:'assistant',content:reply});
     appendBubble('assistant',reply);
-
-    // If dates found, also show visual availability card
-    var dates=extractDatesFromMessage(userText);
-    if(dates&&isAvailabilityQuery(userText)){
+    var dates=extractDates(userText);
+    if(dates&&isAvailQuery(userText)){
       var avRes=checkAvailability(dates.start,dates.end);
-      var days=getDayCount(dates.start,dates.end);
-      if(days>=1){
-        histories[currentMode].push({role:'assistant',availCard:{result:avRes,days:days}});
-        appendAvailCard({result:avRes,days:days},true);
-      }
+      var days=getDays(dates.start,dates.end);
+      if(days>=1){histories[currentMode].push({role:'assistant',availCard:{result:avRes,days:days}});appendAvailCard({result:avRes,days:days},true);}
     }
     isLoading=false;document.getElementById('sendBtn').disabled=false;scrollBottom();
   }).catch(function(){
@@ -740,47 +764,26 @@ function sendMessage(text){
   });
 }
 
-// ─── AVAILABILITY CARD IN CHAT ────────────────────────────────────────────────
 function appendAvailCard(cardData,scroll){
   if(scroll===undefined)scroll=true;
-  var res=cardData.result, days=cardData.days;
+  var res=cardData.result,days=cardData.days;
   var area=document.getElementById('chatArea');
-  var wrapper=document.createElement('div');
-  wrapper.className='msg assistant';
-  var card=document.createElement('div');
-  card.className='avail-card';
+  var wrapper=document.createElement('div');wrapper.className='msg assistant';
+  var card=document.createElement('div');card.className='avail-card';
   var avHtml='',unHtml='';
-  res.available.forEach(function(item){
-    var total=(item.vehicle.price*days).toLocaleString();
-    avHtml+='<div class="avail-item available">'+
-      '<span class="avail-item-name">'+item.vehicle.name+'</span>'+
-      '<span class="avail-item-status green">✓ J$'+total+'</span>'+
-    '</div>';
-  });
-  res.unavailable.forEach(function(item){
-    unHtml+='<div class="avail-item unavailable">'+
-      '<span class="avail-item-name">'+item.vehicle.name+'</span>'+
-      '<span class="avail-item-status red">✗ Booked</span>'+
-    '</div>';
-  });
-  card.innerHTML=
-    '<div class="avail-header">📅 Availability Results</div>'+
-    '<div class="avail-dates">'+formatDate(res.startDate)+' → '+formatDate(res.endDate)+' · '+days+' days</div>'+
-    (avHtml?'<div class="avail-section"><div class="avail-section-title green">✓ Available ('+res.available.length+')</div>'+avHtml+'</div>':'')+
-    (unHtml?'<div class="avail-section"><div class="avail-section-title red">✗ Unavailable ('+res.unavailable.length+')</div>'+unHtml+'</div>':'')+
-    '<div class="avail-total">'+res.available.length+'/'+FLEET.length+' vehicles free · Tap Availability tab for full details</div>';
-  wrapper.appendChild(card);
-  area.appendChild(wrapper);
+  res.available.forEach(function(item){avHtml+='<div class="avail-item available"><span class="avail-item-name">'+item.vehicle.name+'</span><span class="avail-item-status green">✓ J$'+(item.vehicle.price*days).toLocaleString()+'</span></div>';});
+  res.unavailable.forEach(function(item){unHtml+='<div class="avail-item unavailable"><span class="avail-item-name">'+item.vehicle.name+'</span><span class="avail-item-status red">✗ Booked</span></div>';});
+  card.innerHTML='<div class="avail-header">📅 Availability</div><div class="avail-dates">'+fmtDate(res.startDate)+' → '+fmtDate(res.endDate)+' · '+days+' days</div>'+(avHtml?'<div class="avail-section-title green">✓ Available ('+res.available.length+')</div>'+avHtml:'')+(unHtml?'<div class="avail-section-title red" style="margin-top:8px;">✗ Unavailable ('+res.unavailable.length+')</div>'+unHtml:'')+'<div class="avail-total">'+res.available.length+'/'+FLEET.length+' free · Book via WhatsApp</div>';
+  wrapper.appendChild(card);area.appendChild(wrapper);
   if(scroll)scrollBottom();
 }
 
-// ─── CHAT HELPERS ─────────────────────────────────────────────────────────────
 function appendBubble(role,text,scroll){
   if(scroll===undefined)scroll=true;
   var area=document.getElementById('chatArea');
   var div=document.createElement('div');div.className='msg '+role;
-  if(role==='assistant'){div.innerHTML='<div class="avatar">TS</div><div class="bubble">'+esc(text)+'</div>';}
-  else{div.innerHTML='<div class="bubble">'+esc(text)+'</div>';}
+  if(role==='assistant')div.innerHTML='<div class="avatar">TS</div><div class="bubble">'+esc(text)+'</div>';
+  else div.innerHTML='<div class="bubble">'+esc(text)+'</div>';
   area.appendChild(div);if(scroll)scrollBottom();
 }
 
