@@ -214,7 +214,10 @@
     </div>
     <div style="display:flex;align-items:center;gap:7px;">
       <div class="live-badge"><div class="live-dot"></div>Live</div>
-      <button onclick="clearKey()" style="background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;padding:4px;">⚙</button>
+      <div style="display:flex;gap:4px;">
+        <button onclick="clearMemory()" title="Clear memory" style="background:none;border:none;color:var(--muted);font-size:12px;cursor:pointer;padding:4px 6px;border-radius:6px;border:1px solid var(--border);">🧠</button>
+        <button onclick="clearKey()" title="Reset API key" style="background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;padding:4px;">⚙</button>
+      </div>
     </div>
   </div>
 
@@ -366,6 +369,18 @@
 var apiKey='',currentMode='customer',isLoading=false;
 var histories={customer:[],internal:[],marketing:[],research:[]};
 var pendingImport=[];
+
+// MEMORY SYSTEM
+function getMemory(){try{return JSON.parse(localStorage.getItem('ts_memory')||'[]');}catch(e){return[];}}
+function saveMemory(m){localStorage.setItem('ts_memory',JSON.stringify(m.slice(-60)));}
+function addMemory(role,content){var mem=getMemory();mem.push({role:role,content:content,ts:Date.now(),mode:currentMode});saveMemory(mem);}
+function getMemoryContext(){
+  var mem=getMemory();if(!mem.length)return'';
+  var recent=mem.slice(-20);
+  var lines=recent.map(function(m){var label=m.role==='user'?'User':'Assistant';var modeTag=(m.mode&&m.mode!==currentMode)?' ['+m.mode+' mode]':'';return label+modeTag+': '+m.content.substring(0,300)+(m.content.length>300?'...':'');});
+  return'\n\nMemory from previous conversations (use for continuity):\n'+lines.join('\n');
+}
+function clearMemory(){if(confirm('Clear all memory?')){localStorage.removeItem('ts_memory');alert('Memory cleared.');}}
 
 // ── FLEET ────────────────────────────────────────────────────────────────────
 var FLEET=[
@@ -760,17 +775,20 @@ function sendMessage(text){
   document.getElementById('sendBtn').disabled=true;
   var empty=document.querySelector('.empty-state');if(empty)empty.remove();
   histories[currentMode].push({role:'user',content:userText});
+  addMemory('user',userText);
   appendBubble('user',userText);
   document.getElementById('clearBtn').style.display='block';
   var typingEl=showTyping();
-  var systemPrompt=PROMPTS[currentMode]+'\n\nCurrent booking data:\n'+getAvailContext();
+  // System prompt includes booking data + memory context
+  var systemPrompt=PROMPTS[currentMode]+'\n\nCurrent booking data:\n'+getAvailContext()+getMemoryContext();
   var msgs=histories[currentMode].filter(function(m){return!m.availCard;}).map(function(m){return{role:m.role,content:m.content};});
-  fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:800,system:systemPrompt,messages:msgs})})
+  fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:1000,system:systemPrompt,messages:msgs})})
   .then(function(r){return r.json().then(function(d){return{ok:r.ok,data:d};});})
   .then(function(res){
     typingEl.remove();
     var reply=res.ok?(res.data.content&&res.data.content[0]?res.data.content[0].text:'No response.'):(res.data.error&&res.data.error.message?res.data.error.message:'Error. Please try again.');
     histories[currentMode].push({role:'assistant',content:reply});
+    addMemory('assistant',reply);
     appendBubble('assistant',reply);
     var dates=extractDates(userText);
     if(dates&&isAvailQuery(userText)){
