@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -79,96 +80,116 @@
   .v-day{font-size:10px;color:var(--muted);}
   .rules-box{margin-top:14px;padding:13px;border-radius:12px;background:rgba(123,28,28,0.15);border:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.8;}
 
-  /* AVAILABILITY TAB */
-  .avail-tab-card{padding:16px;border-radius:12px;background:var(--dark-card);border:1px solid var(--border);margin-bottom:14px;}
-  .avail-tab-title{font-family:'Playfair Display',serif;font-size:15px;color:var(--gold);margin-bottom:4px;}
-  .avail-tab-sub{font-size:12px;color:var(--muted);margin-bottom:14px;}
-  .date-row{display:flex;gap:10px;margin-bottom:12px;}
-  .date-group{flex:1;}
-  .date-label{font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:5px;}
-  .date-input{width:100%;padding:9px 11px;border-radius:10px;border:1px solid var(--border);background:rgba(26,10,10,0.8);color:var(--white);font-size:13px;font-family:'DM Sans',sans-serif;outline:none;}
-  .date-input:focus{border-color:var(--gold);}
-  .check-btn{width:100%;padding:12px;border-radius:11px;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border:1px solid rgba(201,168,76,0.3);color:var(--gold);font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;}
-  .form-error{color:#E07070;font-size:12px;margin-top:8px;min-height:16px;}
-  .results-area{margin-top:4px;}
-  .result-header{font-size:12px;color:var(--muted);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);}
-  .result-item{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-radius:10px;margin-bottom:6px;}
-  .result-item.av{background:rgba(74,124,89,0.1);border:1px solid rgba(74,124,89,0.25);}
-  .result-item.un{background:rgba(124,42,42,0.1);border:1px solid rgba(124,42,42,0.2);}
-  .result-name{font-size:13px;font-weight:500;color:var(--off-white);}
-  .result-cat{font-size:10px;color:var(--muted);}
-  .result-right{text-align:right;}
-  .result-price{font-size:12px;color:var(--gold);}
-  .result-total{font-size:10px;color:var(--muted);}
-  .result-status{font-size:11px;font-weight:600;}
-  .result-status.green{color:#6EBB8A;}
-  .result-status.red{color:#E07070;}
-  .summary-box{padding:12px;border-radius:10px;background:rgba(201,168,76,0.06);border:1px solid var(--border);font-size:12px;color:var(--muted);margin-top:10px;line-height:1.8;}
+/* AVAILABILITY TAB */
+.avail-tab-card{padding:16px;border-radius:12px;background:var(–dark-card);border:1px solid var(–border);margin-bottom:14px;}
+.avail-tab-title{font-family:‘Playfair Display’,serif;font-size:15px;color:var(–gold);margin-bottom:4px;}
+.avail-tab-sub{font-size:12px;color:var(–muted);margin-bottom:14px;}
+.date-row{display:flex;gap:10px;margin-bottom:12px;}
+.date-group{flex:1;}
+.date-label{font-size:10px;color:var(–gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:5px;}
+.date-input{width:100%;padding:9px 11px;border-radius:10px;border:1px solid var(–border);background:rgba(26,10,10,0.8);color:var(–white);font-size:13px;font-family:‘DM Sans’,sans-serif;outline:none;}
+.date-input:focus{border-color:var(–gold);}
+.check-btn{width:100%;padding:12px;border-radius:11px;background:linear-gradient(135deg,var(–crimson),var(–crimson-deep));border:1px solid rgba(201,168,76,0.3);color:var(–gold);font-size:13px;font-weight:600;cursor:pointer;font-family:‘DM Sans’,sans-serif;}
+.form-error{color:#E07070;font-size:12px;margin-top:8px;min-height:16px;}
+.results-area{margin-top:4px;}
+.result-header{font-size:12px;color:var(–muted);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(–border);}
+.result-item{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-radius:10px;margin-bottom:6px;}
+.result-item.av{background:rgba(74,124,89,0.1);border:1px solid rgba(74,124,89,0.25);}
+.result-item.un{background:rgba(124,42,42,0.1);border:1px solid rgba(124,42,42,0.2);}
+.result-name{font-size:13px;font-weight:500;color:var(–off-white);}
+.result-cat{font-size:10px;color:var(–muted);}
+.result-right{text-align:right;}
+.result-price{font-size:12px;color:var(–gold);}
+.result-total{font-size:10px;color:var(–muted);}
+.result-status{font-size:11px;font-weight:600;}
+.result-status.green{color:#6EBB8A;}
+.result-status.red{color:#E07070;}
+.summary-box{padding:12px;border-radius:10px;background:rgba(201,168,76,0.06);border:1px solid var(–border);font-size:12px;color:var(–muted);margin-top:10px;line-height:1.8;}
 
-  /* BOOKINGS TAB */
-  .booking-tabs{display:flex;gap:8px;margin-bottom:14px;}
-  .booking-tab-btn{padding:7px 14px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-size:12px;font-family:'DM Sans',sans-serif;transition:all 0.2s;}
-  .booking-tab-btn.active{border-color:var(--gold);background:rgba(123,28,28,0.3);color:var(--gold);}
+/* BOOKINGS TAB */
+.booking-tabs{display:flex;gap:8px;margin-bottom:14px;}
+.booking-tab-btn{padding:7px 14px;border-radius:10px;border:1px solid var(–border);background:transparent;color:var(–muted);cursor:pointer;font-size:12px;font-family:‘DM Sans’,sans-serif;transition:all 0.2s;}
+.booking-tab-btn.active{border-color:var(–gold);background:rgba(123,28,28,0.3);color:var(–gold);}
 
-  /* IMPORT SECTION */
-  .import-card{padding:16px;border-radius:12px;background:var(--dark-card);border:1px solid var(--border);margin-bottom:14px;}
-  .import-title{font-family:'Playfair Display',serif;font-size:14px;color:var(--gold);margin-bottom:4px;}
-  .import-sub{font-size:11px;color:var(--muted);margin-bottom:12px;line-height:1.6;}
-  .import-format{padding:10px 12px;border-radius:8px;background:rgba(26,10,10,0.6);border:1px solid var(--border);font-size:11px;color:var(--muted);font-family:monospace;margin-bottom:12px;line-height:1.8;}
-  .import-textarea{width:100%;padding:11px 13px;border-radius:10px;border:1px solid var(--border);background:rgba(26,10,10,0.8);color:var(--white);font-size:12px;font-family:monospace;outline:none;resize:vertical;min-height:120px;line-height:1.7;}
-  .import-textarea:focus{border-color:var(--gold);}
-  .import-textarea::placeholder{color:var(--muted);}
-  .import-btn{width:100%;padding:11px;border-radius:10px;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border:1px solid rgba(201,168,76,0.3);color:var(--gold);font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:10px;}
-  .import-preview{margin-top:12px;}
-  .import-preview-title{font-size:11px;color:var(--gold);margin-bottom:7px;text-transform:uppercase;letter-spacing:0.07em;}
-  .preview-item{padding:6px 10px;border-radius:7px;background:rgba(74,124,89,0.1);border:1px solid rgba(74,124,89,0.2);font-size:11px;color:var(--off-white);margin-bottom:4px;display:flex;justify-content:space-between;}
-  .preview-item.err{background:rgba(124,42,42,0.1);border-color:rgba(124,42,42,0.2);color:#E07070;}
-  .import-result{margin-top:10px;padding:10px;border-radius:8px;background:rgba(74,124,89,0.1);border:1px solid rgba(74,124,89,0.2);font-size:12px;color:#6EBB8A;}
+/* IMPORT SECTION */
+.import-card{padding:16px;border-radius:12px;background:var(–dark-card);border:1px solid var(–border);margin-bottom:14px;}
+.import-title{font-family:‘Playfair Display’,serif;font-size:14px;color:var(–gold);margin-bottom:4px;}
+.import-sub{font-size:11px;color:var(–muted);margin-bottom:12px;line-height:1.6;}
+.import-format{padding:10px 12px;border-radius:8px;background:rgba(26,10,10,0.6);border:1px solid var(–border);font-size:11px;color:var(–muted);font-family:monospace;margin-bottom:12px;line-height:1.8;}
+.import-textarea{width:100%;padding:11px 13px;border-radius:10px;border:1px solid var(–border);background:rgba(26,10,10,0.8);color:var(–white);font-size:12px;font-family:monospace;outline:none;resize:vertical;min-height:120px;line-height:1.7;}
+.import-textarea:focus{border-color:var(–gold);}
+.import-textarea::placeholder{color:var(–muted);}
+.import-btn{width:100%;padding:11px;border-radius:10px;background:linear-gradient(135deg,var(–crimson),var(–crimson-deep));border:1px solid rgba(201,168,76,0.3);color:var(–gold);font-size:13px;font-weight:600;cursor:pointer;font-family:‘DM Sans’,sans-serif;margin-top:10px;}
+.import-preview{margin-top:12px;}
+.import-preview-title{font-size:11px;color:var(–gold);margin-bottom:7px;text-transform:uppercase;letter-spacing:0.07em;}
+.preview-item{padding:6px 10px;border-radius:7px;background:rgba(74,124,89,0.1);border:1px solid rgba(74,124,89,0.2);font-size:11px;color:var(–off-white);margin-bottom:4px;display:flex;justify-content:space-between;}
+.preview-item.err{background:rgba(124,42,42,0.1);border-color:rgba(124,42,42,0.2);color:#E07070;}
+.import-result{margin-top:10px;padding:10px;border-radius:8px;background:rgba(74,124,89,0.1);border:1px solid rgba(74,124,89,0.2);font-size:12px;color:#6EBB8A;}
 
-  /* MANUAL BOOKING FORM */
-  .booking-form{padding:14px;border-radius:12px;background:var(--dark-card);border:1px solid var(--border);margin-bottom:12px;}
-  .form-title{font-family:'Playfair Display',serif;font-size:14px;color:var(--gold);margin-bottom:12px;}
-  .form-group{margin-bottom:10px;}
-  .form-label{font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:5px;display:block;}
-  .form-input{width:100%;padding:9px 11px;border-radius:10px;border:1px solid var(--border);background:rgba(26,10,10,0.8);color:var(--white);font-size:13px;font-family:'DM Sans',sans-serif;outline:none;}
-  .form-input:focus{border-color:var(--gold);}
-  .form-select{width:100%;padding:9px 11px;border-radius:10px;border:1px solid var(--border);background:rgba(26,10,10,0.8);color:var(--white);font-size:13px;font-family:'DM Sans',sans-serif;outline:none;}
-  .add-btn{width:100%;padding:11px;border-radius:10px;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border:1px solid rgba(201,168,76,0.3);color:var(--gold);font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:4px;}
-  .booking-list-item{padding:11px 13px;border-radius:10px;background:var(--dark-card);border:1px solid var(--border);margin-bottom:7px;}
-  .booking-vehicle{font-size:13px;font-weight:600;color:var(--off-white);margin-bottom:3px;}
-  .booking-dates{font-size:11px;color:var(--gold);}
-  .booking-customer{font-size:11px;color:var(--muted);}
-  .booking-actions{display:flex;gap:6px;margin-top:8px;}
-  .del-btn{padding:4px 10px;border-radius:6px;background:rgba(124,42,42,0.2);border:1px solid rgba(124,42,42,0.3);color:#E07070;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;}
-  .no-bookings{text-align:center;padding:30px;color:var(--muted);font-size:13px;}
-  .clear-all-btn{width:100%;padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(124,42,42,0.3);color:#E07070;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;margin-bottom:12px;}
+/* MANUAL BOOKING FORM */
+.booking-form{padding:14px;border-radius:12px;background:var(–dark-card);border:1px solid var(–border);margin-bottom:12px;}
+.form-title{font-family:‘Playfair Display’,serif;font-size:14px;color:var(–gold);margin-bottom:12px;}
+.form-group{margin-bottom:10px;}
+.form-label{font-size:10px;color:var(–gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:5px;display:block;}
+.form-input{width:100%;padding:9px 11px;border-radius:10px;border:1px solid var(–border);background:rgba(26,10,10,0.8);color:var(–white);font-size:13px;font-family:‘DM Sans’,sans-serif;outline:none;}
+.form-input:focus{border-color:var(–gold);}
+.form-select{width:100%;padding:9px 11px;border-radius:10px;border:1px solid var(–border);background:rgba(26,10,10,0.8);color:var(–white);font-size:13px;font-family:‘DM Sans’,sans-serif;outline:none;}
+.add-btn{width:100%;padding:11px;border-radius:10px;background:linear-gradient(135deg,var(–crimson),var(–crimson-deep));border:1px solid rgba(201,168,76,0.3);color:var(–gold);font-size:13px;font-weight:600;cursor:pointer;font-family:‘DM Sans’,sans-serif;margin-top:4px;}
+.booking-list-item{padding:11px 13px;border-radius:10px;background:var(–dark-card);border:1px solid var(–border);margin-bottom:7px;}
+.booking-vehicle{font-size:13px;font-weight:600;color:var(–off-white);margin-bottom:3px;}
+.booking-dates{font-size:11px;color:var(–gold);}
+.booking-customer{font-size:11px;color:var(–muted);}
+.booking-actions{display:flex;gap:6px;margin-top:8px;}
+.del-btn{padding:4px 10px;border-radius:6px;background:rgba(124,42,42,0.2);border:1px solid rgba(124,42,42,0.3);color:#E07070;font-size:11px;cursor:pointer;font-family:‘DM Sans’,sans-serif;}
+.no-bookings{text-align:center;padding:30px;color:var(–muted);font-size:13px;}
+.clear-all-btn{width:100%;padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(124,42,42,0.3);color:#E07070;font-size:12px;cursor:pointer;font-family:‘DM Sans’,sans-serif;margin-bottom:12px;}
 
-  /* QUICK TAB */
-  .quick-btn{width:100%;padding:11px 13px;border-radius:10px;background:rgba(123,28,28,0.15);border:1px solid var(--border);color:var(--off-white);cursor:pointer;font-size:13px;text-align:left;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:10px;margin-bottom:7px;}
-  .quick-arrow{color:var(--gold);}
+/* QUICK TAB */
+.quick-btn{width:100%;padding:11px 13px;border-radius:10px;background:rgba(123,28,28,0.15);border:1px solid var(–border);color:var(–off-white);cursor:pointer;font-size:13px;text-align:left;font-family:‘DM Sans’,sans-serif;display:flex;align-items:center;gap:10px;margin-bottom:7px;}
+.quick-arrow{color:var(–gold);}
 
-  /* SETUP */
-  .setup-overlay{position:fixed;inset:0;background:rgba(26,10,10,0.98);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px;z-index:100;}
-  .setup-logo{width:56px;height:56px;border-radius:13px;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:var(--gold);margin-bottom:18px;animation:glow 3s ease-in-out infinite;}
-  .setup-title{font-family:'Playfair Display',serif;font-size:21px;margin-bottom:7px;text-align:center;}
-  .setup-desc{font-size:12px;color:var(--muted);text-align:center;line-height:1.7;margin-bottom:22px;max-width:290px;}
-  .setup-label{font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:7px;width:100%;max-width:320px;}
-  .setup-input{width:100%;max-width:320px;padding:12px 15px;border-radius:12px;border:1px solid var(--border);background:var(--dark-card);color:var(--white);font-size:13px;font-family:'DM Sans',sans-serif;outline:none;margin-bottom:5px;}
-  .setup-input:focus{border-color:var(--gold);}
-  .setup-error{color:#E07070;font-size:11px;margin-bottom:9px;min-height:16px;width:100%;max-width:320px;text-align:center;}
-  .setup-btn{width:100%;max-width:320px;padding:13px;border-radius:12px;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border:1px solid rgba(201,168,76,0.4);color:var(--gold);font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;}
-  .setup-btn:disabled{opacity:0.6;cursor:not-allowed;}
-  .setup-hint{font-size:11px;color:var(--muted);text-align:center;margin-top:14px;line-height:1.8;}
-  .setup-hint a{color:var(--gold);text-decoration:none;}
-  @keyframes glow{0%,100%{box-shadow:0 0 18px rgba(201,168,76,0.1);}50%{box-shadow:0 0 28px rgba(201,168,76,0.25);}}
-  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.5;}}
-  @keyframes typing{0%,100%{opacity:0.3;transform:translateY(0);}50%{opacity:1;transform:translateY(-4px);}}
-  @keyframes fadeUp{from{opacity:0;transform:translateY(7px);}to{opacity:1;transform:translateY(0);}}
+/* SETUP */
+.setup-overlay{position:fixed;inset:0;background:rgba(26,10,10,0.98);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px;z-index:100;}
+.setup-logo{width:56px;height:56px;border-radius:13px;background:linear-gradient(135deg,var(–crimson),var(–crimson-deep));border:2px solid var(–gold);display:flex;align-items:center;justify-content:center;font-family:‘Playfair Display’,serif;font-weight:700;font-size:18px;color:var(–gold);margin-bottom:18px;animation:glow 3s ease-in-out infinite;}
+.setup-title{font-family:‘Playfair Display’,serif;font-size:21px;margin-bottom:7px;text-align:center;}
+.setup-desc{font-size:12px;color:var(–muted);text-align:center;line-height:1.7;margin-bottom:22px;max-width:290px;}
+.setup-label{font-size:10px;color:var(–gold);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:7px;width:100%;max-width:320px;}
+.setup-input{width:100%;max-width:320px;padding:12px 15px;border-radius:12px;border:1px solid var(–border);background:var(–dark-card);color:var(–white);font-size:13px;font-family:‘DM Sans’,sans-serif;outline:none;margin-bottom:5px;}
+.setup-input:focus{border-color:var(–gold);}
+.setup-error{color:#E07070;font-size:11px;margin-bottom:9px;min-height:16px;width:100%;max-width:320px;text-align:center;}
+.setup-btn{width:100%;max-width:320px;padding:13px;border-radius:12px;background:linear-gradient(135deg,var(–crimson),var(–crimson-deep));border:1px solid rgba(201,168,76,0.4);color:var(–gold);font-size:14px;font-weight:600;cursor:pointer;font-family:‘DM Sans’,sans-serif;}
+.setup-btn:disabled{opacity:0.6;cursor:not-allowed;}
+.setup-hint{font-size:11px;color:var(–muted);text-align:center;margin-top:14px;line-height:1.8;}
+.setup-hint a{color:var(–gold);text-decoration:none;}
+/* MARKDOWN STYLES */
+.bubble-ai{white-space:normal !important;}
+.md-h1{font-family:‘Playfair Display’,serif;font-size:16px;color:var(–gold);margin:12px 0 6px;font-weight:700;border-bottom:1px solid var(–border);padding-bottom:5px;}
+.md-h2{font-family:‘Playfair Display’,serif;font-size:14px;color:var(–gold);margin:11px 0 5px;font-weight:700;letter-spacing:0.02em;}
+.md-h3{font-size:11px;color:var(–muted);margin:8px 0 4px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;}
+.md-bold{color:var(–white);font-weight:600;}
+.md-em{color:var(–off-white);font-style:italic;}
+.md-hr{border:none;border-top:1px solid var(–border);margin:10px 0;}
+.md-bullet{display:flex;gap:8px;align-items:flex-start;margin:3px 0;font-size:13px;line-height:1.55;}
+.md-bullet-dot{width:5px;height:5px;border-radius:50%;background:var(–gold);flex-shrink:0;margin-top:6px;}
+.md-num{display:flex;gap:8px;align-items:flex-start;margin:3px 0;font-size:13px;line-height:1.55;}
+.md-num-n{color:var(–gold);font-weight:700;font-size:12px;min-width:16px;flex-shrink:0;margin-top:1px;}
+.md-code{background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);border-radius:4px;padding:1px 6px;font-family:monospace;font-size:11px;color:var(–gold);}
+.md-table-wrap{overflow-x:auto;margin:8px 0;border-radius:8px;border:1px solid var(–border);}
+.md-table{border-collapse:collapse;width:100%;font-size:11px;}
+.md-table th{background:rgba(123,28,28,0.4);color:var(–gold);padding:7px 10px;text-align:left;font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;}
+.md-table td{padding:7px 10px;color:var(–off-white);border-top:1px solid var(–border);vertical-align:top;line-height:1.5;}
+.md-table tr:last-child td{border-bottom:none;}
+@keyframes glow{0%,100%{box-shadow:0 0 18px rgba(201,168,76,0.1);}50%{box-shadow:0 0 28px rgba(201,168,76,0.25);}}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.5;}}
+@keyframes typing{0%,100%{opacity:0.3;transform:translateY(0);}50%{opacity:1;transform:translateY(-4px);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(7px);}to{opacity:1;transform:translateY(0);}}
 </style>
+
 </head>
 <body>
 
 <!-- SETUP -->
+
 <div class="setup-overlay" id="setupOverlay">
   <div class="setup-logo">TS</div>
   <div class="setup-title">TS Rentals Assistant</div>
@@ -184,6 +205,7 @@
 </div>
 
 <!-- APP -->
+
 <div id="app" style="display:none;flex-direction:column;flex:1;min-height:100vh;">
   <div class="header">
     <div style="display:flex;align-items:center;gap:11px;">
@@ -213,126 +235,128 @@
 
   <div class="content">
 
-    <!-- CHAT -->
-    <div id="tab-chat" style="flex:1;display:flex;flex-direction:column;min-height:0;">
-      <div class="chat-area" id="chatArea"></div>
-      <div class="input-area">
-        <button class="clear-btn" id="clearBtn" style="display:none;" onclick="clearChat()">Clear conversation</button>
-        <div class="input-row">
-          <input class="text-input" id="msgInput" placeholder="Ask in Customer Mode..." onkeydown="handleKey(event)" autocorrect="off"/>
-          <button class="send-btn" id="sendBtn" onclick="sendMessage()">↑</button>
-        </div>
-        <div class="footer-text">TS RENTALS & RECOVERY · JAMAICA · AI ASSISTANT</div>
+```
+<!-- CHAT -->
+<div id="tab-chat" style="flex:1;display:flex;flex-direction:column;min-height:0;">
+  <div class="chat-area" id="chatArea"></div>
+  <div class="input-area">
+    <button class="clear-btn" id="clearBtn" style="display:none;" onclick="clearChat()">Clear conversation</button>
+    <div class="input-row">
+      <input class="text-input" id="msgInput" placeholder="Ask in Customer Mode..." onkeydown="handleKey(event)" autocorrect="off"/>
+      <button class="send-btn" id="sendBtn" onclick="sendMessage()">↑</button>
+    </div>
+    <div class="footer-text">TS RENTALS & RECOVERY · JAMAICA · AI ASSISTANT</div>
+  </div>
+</div>
+
+<!-- AVAILABILITY -->
+<div id="tab-avail" style="display:none;flex:1;overflow:hidden;">
+  <div class="scroll-area">
+    <div class="avail-tab-card">
+      <div class="avail-tab-title">Check Availability</div>
+      <div class="avail-tab-sub">Pick dates to see which vehicles are free.</div>
+      <div class="date-row">
+        <div class="date-group"><div class="date-label">Start Date</div><input type="date" class="date-input" id="checkStart"/></div>
+        <div class="date-group"><div class="date-label">End Date</div><input type="date" class="date-input" id="checkEnd"/></div>
       </div>
+      <button class="check-btn" onclick="runAvailCheck()">Check Availability</button>
+      <div class="form-error" id="availError"></div>
+    </div>
+    <div id="availResults"></div>
+  </div>
+</div>
+
+<!-- BOOKINGS -->
+<div id="tab-bookings" style="display:none;flex:1;overflow:hidden;">
+  <div class="scroll-area">
+    <div class="booking-tabs">
+      <button class="booking-tab-btn active" id="btab-import" onclick="setBTab('import',this)">📥 Import</button>
+      <button class="booking-tab-btn" id="btab-manual" onclick="setBTab('manual',this)">➕ Manual</button>
+      <button class="booking-tab-btn" id="btab-list" onclick="setBTab('list',this)">📋 List</button>
     </div>
 
-    <!-- AVAILABILITY -->
-    <div id="tab-avail" style="display:none;flex:1;overflow:hidden;">
-      <div class="scroll-area">
-        <div class="avail-tab-card">
-          <div class="avail-tab-title">Check Availability</div>
-          <div class="avail-tab-sub">Pick dates to see which vehicles are free.</div>
-          <div class="date-row">
-            <div class="date-group"><div class="date-label">Start Date</div><input type="date" class="date-input" id="checkStart"/></div>
-            <div class="date-group"><div class="date-label">End Date</div><input type="date" class="date-input" id="checkEnd"/></div>
+    <!-- IMPORT PANEL -->
+    <div id="bpanel-import">
+      <div class="import-card">
+        <div class="import-title">Bulk Import Bookings</div>
+        <div class="import-sub">Paste your bookings in this format — one per line:</div>
+        <div class="import-format">
+          VehicleName DD-DD [CustomerName]<br>
+          Examples:<br>
+          GLC 8-18 John Smith<br>
+          Axio 3-13<br>
+          Corolla 13-21 Sarah Jones
+        </div>
+        <div class="date-label" style="margin-bottom:6px;">Month & Year for these bookings</div>
+        <div class="date-row" style="margin-bottom:12px;">
+          <div class="date-group">
+            <select class="date-input" id="importMonth">
+              <option value="1">January</option><option value="2">February</option>
+              <option value="3">March</option><option value="4" selected>April</option>
+              <option value="5">May</option><option value="6">June</option>
+              <option value="7">July</option><option value="8">August</option>
+              <option value="9">September</option><option value="10">October</option>
+              <option value="11">November</option><option value="12">December</option>
+            </select>
           </div>
-          <button class="check-btn" onclick="runAvailCheck()">Check Availability</button>
-          <div class="form-error" id="availError"></div>
-        </div>
-        <div id="availResults"></div>
-      </div>
-    </div>
-
-    <!-- BOOKINGS -->
-    <div id="tab-bookings" style="display:none;flex:1;overflow:hidden;">
-      <div class="scroll-area">
-        <div class="booking-tabs">
-          <button class="booking-tab-btn active" id="btab-import" onclick="setBTab('import',this)">📥 Import</button>
-          <button class="booking-tab-btn" id="btab-manual" onclick="setBTab('manual',this)">➕ Manual</button>
-          <button class="booking-tab-btn" id="btab-list" onclick="setBTab('list',this)">📋 List</button>
-        </div>
-
-        <!-- IMPORT PANEL -->
-        <div id="bpanel-import">
-          <div class="import-card">
-            <div class="import-title">Bulk Import Bookings</div>
-            <div class="import-sub">Paste your bookings in this format — one per line:</div>
-            <div class="import-format">
-              VehicleName DD-DD [CustomerName]<br>
-              Examples:<br>
-              GLC 8-18 John Smith<br>
-              Axio 3-13<br>
-              Corolla 13-21 Sarah Jones
-            </div>
-            <div class="date-label" style="margin-bottom:6px;">Month & Year for these bookings</div>
-            <div class="date-row" style="margin-bottom:12px;">
-              <div class="date-group">
-                <select class="date-input" id="importMonth">
-                  <option value="1">January</option><option value="2">February</option>
-                  <option value="3">March</option><option value="4" selected>April</option>
-                  <option value="5">May</option><option value="6">June</option>
-                  <option value="7">July</option><option value="8">August</option>
-                  <option value="9">September</option><option value="10">October</option>
-                  <option value="11">November</option><option value="12">December</option>
-                </select>
-              </div>
-              <div class="date-group">
-                <input type="number" class="date-input" id="importYear" value="2026" min="2024" max="2030"/>
-              </div>
-            </div>
-            <textarea class="import-textarea" id="importText" placeholder="Paste your bookings here...&#10;GLC 8-18&#10;Axio 3-13 Customer Name&#10;Corolla 3-12"></textarea>
-            <div id="importPreview" class="import-preview" style="display:none;"></div>
-            <button class="import-btn" onclick="previewImport()" id="previewBtn">Preview Import</button>
-            <button class="import-btn" onclick="confirmImport()" id="confirmImportBtn" style="display:none;background:linear-gradient(135deg,#2A5C3A,#1A3C2A);margin-top:8px;">✓ Confirm & Import All</button>
-            <div class="form-error" id="importError"></div>
-          </div>
-          <button class="import-btn" onclick="loadAprilBookings()" style="background:rgba(123,28,28,0.3);border:1px solid var(--border);margin-bottom:10px;">📅 Load April 2026 Bookings</button>
-        </div>
-
-        <!-- MANUAL PANEL -->
-        <div id="bpanel-manual" style="display:none;">
-          <div class="booking-form">
-            <div class="form-title">Add Single Booking</div>
-            <div class="form-group"><label class="form-label">Vehicle</label><select class="form-select" id="bVehicle"></select></div>
-            <div class="date-row">
-              <div class="date-group"><div class="date-label">Start</div><input type="date" class="form-input" id="bStart"/></div>
-              <div class="date-group"><div class="date-label">End</div><input type="date" class="form-input" id="bEnd"/></div>
-            </div>
-            <div class="form-group"><label class="form-label">Customer Name</label><input type="text" class="form-input" id="bCustomer" placeholder="e.g. John Smith"/></div>
-            <div class="form-error" id="bookingError"></div>
-            <button class="add-btn" onclick="addBooking()">Add Booking</button>
+          <div class="date-group">
+            <input type="number" class="date-input" id="importYear" value="2026" min="2024" max="2030"/>
           </div>
         </div>
+        <textarea class="import-textarea" id="importText" placeholder="Paste your bookings here...&#10;GLC 8-18&#10;Axio 3-13 Customer Name&#10;Corolla 3-12"></textarea>
+        <div id="importPreview" class="import-preview" style="display:none;"></div>
+        <button class="import-btn" onclick="previewImport()" id="previewBtn">Preview Import</button>
+        <button class="import-btn" onclick="confirmImport()" id="confirmImportBtn" style="display:none;background:linear-gradient(135deg,#2A5C3A,#1A3C2A);margin-top:8px;">✓ Confirm & Import All</button>
+        <div class="form-error" id="importError"></div>
+      </div>
+      <button class="import-btn" onclick="loadAprilBookings()" style="background:rgba(123,28,28,0.3);border:1px solid var(--border);margin-bottom:10px;">📅 Load April 2026 Bookings</button>
+    </div>
 
-        <!-- LIST PANEL -->
-        <div id="bpanel-list" style="display:none;">
-          <button class="clear-all-btn" onclick="clearAllBookings()">🗑 Clear All Bookings</button>
-          <div id="bookingList"></div>
+    <!-- MANUAL PANEL -->
+    <div id="bpanel-manual" style="display:none;">
+      <div class="booking-form">
+        <div class="form-title">Add Single Booking</div>
+        <div class="form-group"><label class="form-label">Vehicle</label><select class="form-select" id="bVehicle"></select></div>
+        <div class="date-row">
+          <div class="date-group"><div class="date-label">Start</div><input type="date" class="form-input" id="bStart"/></div>
+          <div class="date-group"><div class="date-label">End</div><input type="date" class="form-input" id="bEnd"/></div>
         </div>
+        <div class="form-group"><label class="form-label">Customer Name</label><input type="text" class="form-input" id="bCustomer" placeholder="e.g. John Smith"/></div>
+        <div class="form-error" id="bookingError"></div>
+        <button class="add-btn" onclick="addBooking()">Add Booking</button>
       </div>
     </div>
 
-    <!-- FLEET -->
-    <div id="tab-fleet" style="display:none;flex:1;overflow:hidden;">
-      <div class="scroll-area">
-        <div class="section-title">Fleet & Daily Pricing</div>
-        <div id="fleetList"></div>
-        <div class="rules-box">
-          <strong style="color:var(--gold);">Business Rules</strong><br>
-          • Minimum rental: 3 days · 25% deposit secures vehicle<br>
-          • Airport pickup: FREE (Kingston) — fee for MBJ<br>
-          • Island-wide delivery available · Bookings via WhatsApp
-        </div>
-      </div>
+    <!-- LIST PANEL -->
+    <div id="bpanel-list" style="display:none;">
+      <button class="clear-all-btn" onclick="clearAllBookings()">🗑 Clear All Bookings</button>
+      <div id="bookingList"></div>
     </div>
+  </div>
+</div>
 
-    <!-- QUICK -->
-    <div id="tab-quick" style="display:none;flex:1;overflow:hidden;">
-      <div class="scroll-area">
-        <div class="section-title">Quick Actions</div>
-        <div id="quickList"></div>
-      </div>
+<!-- FLEET -->
+<div id="tab-fleet" style="display:none;flex:1;overflow:hidden;">
+  <div class="scroll-area">
+    <div class="section-title">Fleet & Daily Pricing</div>
+    <div id="fleetList"></div>
+    <div class="rules-box">
+      <strong style="color:var(--gold);">Business Rules</strong><br>
+      • Minimum rental: 3 days · 25% deposit secures vehicle<br>
+      • Airport pickup: FREE (Kingston) — fee for MBJ<br>
+      • Island-wide delivery available · Bookings via WhatsApp
     </div>
+  </div>
+</div>
+
+<!-- QUICK -->
+<div id="tab-quick" style="display:none;flex:1;overflow:hidden;">
+  <div class="scroll-area">
+    <div class="section-title">Quick Actions</div>
+    <div id="quickList"></div>
+  </div>
+</div>
+```
 
   </div>
 </div>
@@ -778,12 +802,84 @@ function appendAvailCard(cardData,scroll){
   if(scroll)scrollBottom();
 }
 
+function renderMarkdown(text){
+  // Escape HTML first
+  var t=text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+  // Tables — detect | row | patterns
+  var lines=t.split('\n');
+  var out=[];
+  var i=0;
+  while(i<lines.length){
+    var line=lines[i];
+    // Table row detection
+    if(line.trim().startsWith('|')&&line.trim().endsWith('|')){
+      var tableLines=[];
+      while(i<lines.length&&lines[i].trim().startsWith('|')&&lines[i].trim().endsWith('|')){
+        tableLines.push(lines[i]);i++;
+      }
+      // Filter separator rows (---|---)
+      var filtered=tableLines.filter(function(l){return!/^\s*\|[\s\-|]+\|\s*$/.test(l);});
+      if(filtered.length){
+        var tableHtml='<div class="md-table-wrap"><table class="md-table">';
+        filtered.forEach(function(row,idx){
+          var cells=row.split('|').slice(1,-1);
+          var tag=idx===0?'th':'td';
+          tableHtml+='<tr>'+cells.map(function(c){return'<'+tag+'>'+c.trim()+'</'+tag+'>';}).join('')+'</tr>';
+        });
+        tableHtml+='</table></div>';
+        out.push(tableHtml);
+      }
+    } else {
+      out.push(line);i++;
+    }
+  }
+  t=out.join('\n');
+
+  // H2 ## headings
+  t=t.replace(/^##\s+(.+)$/gm,'<div class="md-h2">$1</div>');
+  // H3 ### headings
+  t=t.replace(/^###\s+(.+)$/gm,'<div class="md-h3">$1</div>');
+  // H1 # headings
+  t=t.replace(/^#\s+(.+)$/gm,'<div class="md-h1">$1</div>');
+
+  // Horizontal rules ---
+  t=t.replace(/^---+$/gm,'<div class="md-hr"></div>');
+
+  // Bold **text**
+  t=t.replace(/\*\*(.+?)\*\*/g,'<strong class="md-bold">$1</strong>');
+  // Italic *text*
+  t=t.replace(/\*([^*\n]+?)\*/g,'<em class="md-em">$1</em>');
+
+  // Bullet points - item or * item
+  t=t.replace(/^[\-\*]\s+(.+)$/gm,'<div class="md-bullet"><span class="md-bullet-dot"></span><span>$1</span></div>');
+
+  // Numbered list 1. item
+  t=t.replace(/^(\d+)\.\s+(.+)$/gm,'<div class="md-num"><span class="md-num-n">$1</span><span>$2</span></div>');
+
+  // Inline code `code`
+  t=t.replace(/`([^`]+)`/g,'<code class="md-code">$1</code>');
+
+  // Line breaks (non-HTML lines)
+  t=t.replace(/\n/g,'<br>');
+  // Clean up excess <br> around block elements
+  t=t.replace(/<br>(<div class="md-)/g,'$1');
+  t=t.replace(/(<\/div>)<br>/g,'$1');
+  t=t.replace(/<br>(<div class="md-table-wrap)/g,'$1');
+  t=t.replace(/(<\/div>)<br>(<div class="md-table-wrap)/g,'$1$2');
+
+  return t;
+}
+
 function appendBubble(role,text,scroll){
   if(scroll===undefined)scroll=true;
   var area=document.getElementById('chatArea');
   var div=document.createElement('div');div.className='msg '+role;
-  if(role==='assistant')div.innerHTML='<div class="avatar">TS</div><div class="bubble">'+esc(text)+'</div>';
-  else div.innerHTML='<div class="bubble">'+esc(text)+'</div>';
+  if(role==='assistant'){
+    div.innerHTML='<div class="avatar">TS</div><div class="bubble bubble-ai">'+renderMarkdown(text)+'</div>';
+  } else {
+    div.innerHTML='<div class="bubble">'+text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>')+'</div>';
+  }
   area.appendChild(div);if(scroll)scrollBottom();
 }
 
@@ -798,5 +894,6 @@ function clearChat(){histories[currentMode]=[];showEmpty();}
 function scrollBottom(){var a=document.getElementById('chatArea');setTimeout(function(){a.scrollTop=a.scrollHeight;},50);}
 function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');}
 </script>
+
 </body>
 </html>
