@@ -53,16 +53,16 @@ body{font-family:'DM Sans',sans-serif;background:#E8E8E8;color:#1A1A1A;min-heigh
 .sb-footer-btn.red{border-color:rgba(107,20,20,0.2);color:#6B1414;}
 
 /* ── TOP HEADER ── */
-.hdr{padding:11px 16px 10px;background:linear-gradient(135deg,#3D0A0A 0%,#6B1414 100%);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(0,0,0,0.18);}
+.hdr{padding:15px 16px 14px;background:linear-gradient(135deg,#3D0A0A 0%,#6B1414 100%);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(0,0,0,0.2);}
 .hdr-left{display:flex;align-items:center;gap:11px;}
-.menu-btn{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);border-radius:8px;color:#FFF;font-size:18px;cursor:pointer;padding:5px 8px;line-height:1;display:flex;align-items:center;justify-content:center;}
-.hdr-logo{width:36px;height:36px;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.2);flex-shrink:0;}
+.menu-btn{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.18);border-radius:9px;color:#FFF;font-size:20px;cursor:pointer;padding:6px 10px;line-height:1;display:flex;align-items:center;justify-content:center;}
+.hdr-logo{width:42px;height:42px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.2);flex-shrink:0;}
 .hdr-logo img{width:100%;height:100%;object-fit:cover;}
 .hdr-info{}
-.hdr-name{font-family:‘Playfair Display’,serif;font-size:15px;font-weight:700;color:#FFF;line-height:1.2;}
-.hdr-context{font-size:10px;color:rgba(255,255,255,0.65);letter-spacing:0.06em;margin-top:1px;}
+.hdr-name{font-family:‘Playfair Display’,serif;font-size:17px;font-weight:700;color:#FFF;line-height:1.2;}
+.hdr-context{font-size:11px;color:rgba(255,255,255,0.75);letter-spacing:0.04em;margin-top:2px;}
 .hdr-right{display:flex;align-items:center;gap:6px;}
-.lpill{display:flex;align-items:center;gap:4px;padding:3px 9px;border-radius:20px;background:rgba(255,255,255,0.12);font-size:10px;color:rgba(255,255,255,0.85);font-weight:600;}
+.lpill{display:flex;align-items:center;gap:5px;padding:5px 11px;border-radius:20px;background:rgba(255,255,255,0.12);font-size:11px;color:rgba(255,255,255,0.9);font-weight:600;}
 .ldot{width:5px;height:5px;border-radius:50%;background:#5BB07A;animation:pulse 2s infinite;}
 
 /* ── CONTENT ── */
@@ -193,6 +193,20 @@ textarea::placeholder,input::placeholder{color:#BBB;}
 .bubble.ai .md-table th{background:#6B1414;color:#FFF;padding:9px 12px;text-align:left;font-weight:700;font-size:11px;letter-spacing:0.04em;white-space:nowrap;}
 .bubble.ai .md-table td{padding:9px 12px;color:#1A1A1A;border-top:1px solid #EEE;vertical-align:top;line-height:1.5;}
 .bubble.ai .md-table tr:nth-child(even) td{background:#FAFAFA;}
+.avail-tabs{display:flex;gap:8px;margin-bottom:14px;}
+.avail-tab{flex:1;padding:10px 14px;border-radius:11px;border:1.5px solid #DDD;background:#FFF;color:#666;cursor:pointer;font-size:13px;font-weight:600;font-family:‘DM Sans’,sans-serif;transition:all 0.15s;text-align:center;}
+.avail-tab.active{background:#6B1414;border-color:#6B1414;color:#FFF;}
+.vc-period{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:10px;margin-bottom:6px;background:#FFF;border-left:3px solid #27AE60;}
+.vc-period.booked{border-left-color:#C0392B;background:#FFF;}
+.vc-period.free{border-left-color:#27AE60;}
+.vc-label{font-size:13px;font-weight:700;color:#1A1A1A;}
+.vc-dates{font-size:11px;color:#888;margin-top:2px;}
+.vc-cust{font-size:11px;color:#6B1414;margin-top:2px;font-weight:600;}
+.vc-status{font-size:12px;font-weight:700;}
+.vc-status.green{color:#27AE60;}
+.vc-status.red{color:#C0392B;}
+.vc-summary{padding:14px;border-radius:11px;background:#F9F9F9;border:1px solid #EEE;font-size:12px;color:#666;line-height:1.9;margin-top:4px;}
+.vc-summary strong{color:#6B1414;}
 .setup{position:fixed;inset:0;background:linear-gradient(160deg,#3D0A0A 0%,#1A0505 60%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;z-index:200;}
 .slogo{width:80px;height:80px;border-radius:18px;overflow:hidden;margin-bottom:20px;box-shadow:0 8px 40px rgba(0,0,0,0.5);}
 .slogo img{width:100%;height:100%;object-fit:cover;}
@@ -341,16 +355,52 @@ textarea::placeholder,input::placeholder{color:#BBB;}
 <div id="tab-avail" style="display:none;flex:1;overflow:hidden;">
   <div class="scrollpane">
     <div class="sechd">Check Availability</div>
-    <div class="card">
-      <div class="card-sub">Select dates to see which vehicles are free.</div>
-      <div class="dategrid">
-        <div><label class="flbl">Start Date</label><input type="date" id="checkStart"/></div>
-        <div><label class="flbl">End Date</label><input type="date" id="checkEnd"/></div>
-      </div>
-      <button class="abtn" onclick="runAvailCheck()">Check Availability</button>
-      <div class="ferr" id="availErr"></div>
+
+    <!-- AVAIL SUB-TABS -->
+    <div class="avail-tabs">
+      <button class="avail-tab active" id="avtab-dates" onclick="setAvailTab('dates',this)">📅 By Dates</button>
+      <button class="avail-tab" id="avtab-vehicle" onclick="setAvailTab('vehicle',this)">🚗 By Vehicle</button>
     </div>
-    <div id="availResults"></div>
+
+    <!-- BY DATES -->
+    <div id="avpanel-dates">
+      <div class="card">
+        <div class="card-title">All Vehicles</div>
+        <div class="card-sub">Select dates to see which vehicles are free.</div>
+        <div class="dategrid">
+          <div><label class="flbl">Start Date</label><input type="date" id="checkStart"/></div>
+          <div><label class="flbl">End Date</label><input type="date" id="checkEnd"/></div>
+        </div>
+        <button class="abtn" onclick="runAvailCheck()">Check Availability</button>
+        <div class="ferr" id="availErr"></div>
+      </div>
+      <div id="availResults"></div>
+    </div>
+
+    <!-- BY VEHICLE -->
+    <div id="avpanel-vehicle" style="display:none;">
+      <div class="card">
+        <div class="card-title">Single Vehicle</div>
+        <div class="card-sub">Select a vehicle to see its full booking calendar.</div>
+        <label class="flbl">Select Vehicle</label>
+        <select id="vehicleSelect" style="margin-bottom:14px;" onchange="renderVehicleCalendar()"></select>
+        <label class="flbl">Month</label>
+        <div class="dategrid" style="margin-bottom:14px;">
+          <div>
+            <select id="vcMonth">
+              <option value="1">January</option><option value="2">February</option><option value="3">March</option>
+              <option value="4" selected>April</option><option value="5">May</option><option value="6">June</option>
+              <option value="7">July</option><option value="8">August</option><option value="9">September</option>
+              <option value="10">October</option><option value="11">November</option><option value="12">December</option>
+            </select>
+          </div>
+          <div><input type="number" id="vcYear" value="2026" min="2024" max="2030" onchange="renderVehicleCalendar()"/></div>
+        </div>
+        <button class="abtn" onclick="renderVehicleCalendar()">View Schedule</button>
+      </div>
+      <div id="vehicleResults"></div>
+    </div>
+
   </div>
 </div>
 
@@ -530,7 +580,7 @@ function isAvailQ(msg){return['available','avail','book','rent','free','open'].s
 var QUICK={customer:['What cars are available Apr 22 to Apr 27?','Airport pickup from MBJ?','How does the deposit work?','Pricing for Mercedes GLC?','Island-wide delivery options?'],internal:['Summarise April bookings revenue','Which vehicles are most booked?','Upsell script for economy customers','Follow-up strategy for cold leads','Peak season pricing recommendations'],marketing:['Instagram caption for the Porsche','Google Ad copy for airport pickup','Diaspora traveller campaign ideas','TikTok hook for premium fleet','Holiday WhatsApp blast message'],research:['Jamaica events driving rental demand','Peak tourism periods 2026','Best months for premium vehicle demand','Carnival & festival demand windows','Competitor pricing analysis'],};
 var META={customer:{title:'Customer Mode',desc:'Pricing, availability, pickup & bookings.'},internal:{title:'Business Mode',desc:'Revenue strategy, pricing & upsells.'},marketing:{title:'Marketing Mode',desc:'Captions, ads & campaigns.'},research:{title:'Research Mode',desc:'Demand signals & market intel.'},};
 var PROMPTS={customer:'You are the customer-facing assistant for TS Rentals & Recovery, a premium Jamaica-based car rental company.\n\nVoice: Premium, smooth, confident, conversion-focused.\n\nFleet & Pricing (JMD/day):\nToyota Axio $8,000 | Nissan Sylphy $8,000 | Toyota Corolla $9,000 | Honda Stream $9,000\nMark X $15,000 | Audi A6 $20,000 | Jaguar XF $25,000 | Mercedes C300h $25,000\nMercedes GLC $35,000 | Mercedes GLE $80,000 | Porsche Macan GTS $80,000\n\nMin 3 days. 25% deposit secures vehicle. Airport pickup FREE Kingston, fee MBJ. Island-wide delivery available.\n\nUse booking data for availability. Always end with WhatsApp CTA: wa.me/18767915202',internal:'You are the internal business assistant for TS Rentals & Recovery. Strategic, direct, revenue-focused.\n\nFleet (JMD/day): Economy $8-9K | Executive $15K | Premium $20K | Luxury $25K | Luxury SUV $35K | Ultra $80K\n\nUse booking data for occupancy insights. Bullet points. Tie to revenue impact.',marketing:'You are the marketing strategist for TS Rentals & Recovery, Jamaica. Premium. Reliable. No stress.\n\nCreate IG/TikTok captions, Google/Meta ads, WhatsApp blasts. CTA: wa.me/18767915202. Punchy and ready to post.',research:'You are the market research advisor for TS Rentals & Recovery, Jamaica. Analyze demand signals. Identify events, tourism peaks, opportunities. Always end with a clear business recommendation.',};
-window.onload=function(){var saved=localStorage.getItem('ts_api_key');if(saved&&saved.startsWith('sk-')){apiKey=saved;showApp();}renderFleet();renderQuick();populateVehicleSel();renderBKList();showEmpty();};
+window.onload=function(){var saved=localStorage.getItem('ts_api_key');if(saved&&saved.startsWith('sk-')){apiKey=saved;showApp();}renderFleet();renderQuick();populateVehicleSel();populateVehicleAvailSel();renderBKList();showEmpty();};
 function saveKey(){var val=document.getElementById('apiKeyInput').value.trim();var err=document.getElementById('setupErr'),btn=document.getElementById('activateBtn');err.textContent='';if(!val){err.textContent='Please enter your API key.';return;}if(!val.startsWith('sk-')){err.textContent='Invalid — must start with sk-ant-';return;}btn.textContent='Connecting...';btn.disabled=true;fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':val,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:5,messages:[{role:'user',content:'Hi'}]})}).then(function(r){if(r.ok){apiKey=val;localStorage.setItem('ts_api_key',val);showApp();}else{r.json().then(function(d){err.textContent=d.error&&d.error.message?d.error.message:'Key rejected.';btn.textContent='Activate Assistant';btn.disabled=false;}).catch(function(){err.textContent='Key rejected.';btn.textContent='Activate Assistant';btn.disabled=false;})}}).catch(function(){err.textContent='Connection error.';btn.textContent='Activate Assistant';btn.disabled=false;});}
 function clearKey(){if(confirm('Reset API key?')){localStorage.removeItem('ts_api_key');apiKey='';document.getElementById('app').style.display='none';document.getElementById('setupScreen').style.display='flex';document.getElementById('apiKeyInput').value='';document.getElementById('setupErr').textContent='';document.getElementById('activateBtn').textContent='Activate Assistant';document.getElementById('activateBtn').disabled=false;}}
 function showApp(){document.getElementById('setupScreen').style.display='none';document.getElementById('app').style.display='flex';}
@@ -556,6 +606,119 @@ function appendBubble(role,text,scroll){if(scroll===undefined)scroll=true;var ar
 function showTyping(){var area=document.getElementById('chatMsgs');var wrap=document.createElement('div');wrap.className='typingrow';var av=document.createElement('div');av.className='mavatar';av.innerHTML='<img src="'+LOGO+'" alt="TS"/>';var bub=document.createElement('div');bub.className='typingbub';bub.innerHTML='<div class="tdot"></div><div class="tdot"></div><div class="tdot"></div>';wrap.appendChild(av);wrap.appendChild(bub);area.appendChild(wrap);scrollBottom();return wrap;}
 function clearChat(){histories[currentMode]=[];showEmpty();}
 function scrollBottom(){var a=document.getElementById('chatMsgs');setTimeout(function(){a.scrollTop=a.scrollHeight;},50);}
+
+/* ── AVAILABILITY SUB-TABS ── */
+function setAvailTab(tab,btn){
+  document.querySelectorAll('.avail-tab').forEach(function(b){b.classList.remove('active');});
+  if(btn)btn.classList.add('active');
+  document.getElementById('avpanel-dates').style.display=tab==='dates'?'block':'none';
+  document.getElementById('avpanel-vehicle').style.display=tab==='vehicle'?'block':'none';
+  if(tab==='vehicle')renderVehicleCalendar();
+}
+
+/* ── VEHICLE SELECT POPULATE ── */
+function populateVehicleAvailSel(){
+  var sel=document.getElementById('vehicleSelect');
+  sel.innerHTML='';
+  FLEET.forEach(function(v){
+    var o=document.createElement('option');
+    o.value=v.id;
+    o.textContent=v.name+' ('+v.cat+') — J$'+v.price.toLocaleString()+'/day';
+    sel.appendChild(o);
+  });
+  sel.addEventListener('change', renderVehicleCalendar);
+  document.getElementById('vcMonth').addEventListener('change', renderVehicleCalendar);
+}
+
+/* ── VEHICLE CALENDAR RENDER ── */
+function renderVehicleCalendar(){
+  var vid=document.getElementById('vehicleSelect').value;
+  var month=parseInt(document.getElementById('vcMonth').value);
+  var year=parseInt(document.getElementById('vcYear').value);
+  var vehicle=FLEET.find(function(v){return v.id===vid;});
+  if(!vehicle)return;
+
+  var el=document.getElementById('vehicleResults');
+  var bk=getBK().filter(function(b){return b.vehicleId===vid&&b.status!=='cancelled';});
+
+  // Month range
+  var mStart=new Date(year,month-1,1);
+  var mEnd=new Date(year,month,0);
+  var mStartStr=year+'-'+String(month).padStart(2,'0')+'-01';
+  var mEndStr=year+'-'+String(month).padStart(2,'0')+'-'+String(mEnd.getDate()).padStart(2,'0');
+
+  // Filter bookings that overlap this month
+  var relevant=bk.filter(function(b){
+    return new Date(b.startDate)<=mEnd&&new Date(b.endDate)>=mStart;
+  });
+
+  var totalDays=mEnd.getDate();
+  var bookedDays=0;
+
+  // Build timeline
+  var html='<div style="font-size:12px;color:#888;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #DDD;">'
+    +'<strong style="color:#1A1A1A;font-size:14px;">'+vehicle.name+'</strong> · '
+    +new Date(year,month-1,1).toLocaleString('en-US',{month:'long',year:'numeric'})+'</div>';
+
+  if(!relevant.length){
+    html+='<div class="vc-period free"><div><div class="vc-label">Entire Month</div><div class="vc-dates">'+fmt(mStartStr)+' – '+fmt(mEndStr)+'</div></div><div class="vc-status green">✓ Free</div></div>';
+    bookedDays=0;
+  } else {
+    // Sort by start date
+    relevant.sort(function(a,b){return new Date(a.startDate)-new Date(b.startDate);});
+
+    // Track free gaps
+    var pointer=new Date(mStart);
+
+    relevant.forEach(function(b){
+      var bStart=new Date(b.startDate);
+      var bEnd=new Date(b.endDate);
+      // Clamp to month
+      var displayStart=bStart<mStart?mStart:bStart;
+      var displayEnd=bEnd>mEnd?new Date(mEnd.getTime()+864e5):bEnd;
+
+      // Free period before this booking
+      if(pointer<displayStart&&pointer<=mEnd){
+        var freeEnd=new Date(displayStart.getTime()-864e5);
+        if(freeEnd>=mStart){
+          var fsStr=pointer.toISOString().split('T')[0];
+          var feStr=freeEnd.toISOString().split('T')[0];
+          var fd=Math.round((freeEnd-pointer)/864e5)+1;
+          html+='<div class="vc-period free"><div><div class="vc-label">Available</div><div class="vc-dates">'+fmt(fsStr)+' – '+fmt(feStr)+'</div></div><div class="vc-status green">✓ '+fd+' days</div></div>';
+        }
+      }
+
+      // Booked period
+      var bd=Math.round((displayEnd-displayStart)/864e5);
+      bookedDays+=bd;
+      var bsStr=displayStart.toISOString().split('T')[0];
+      var beStr=new Date(displayEnd.getTime()-864e5).toISOString().split('T')[0];
+      html+='<div class="vc-period booked"><div><div class="vc-label">Booked</div><div class="vc-dates">'+fmt(bsStr)+' – '+fmt(beStr)+'</div>'+(b.customer&&b.customer!=='Customer'?'<div class="vc-cust">'+b.customer+'</div>':'')+'</div><div class="vc-status red">✗ '+bd+' days</div></div>';
+
+      pointer=new Date(displayEnd);
+    });
+
+    // Free gap after last booking
+    if(pointer<=mEnd){
+      var fsStr2=pointer.toISOString().split('T')[0];
+      var feStr2=mEndStr;
+      var fd2=Math.round((mEnd-pointer)/864e5)+1;
+      if(fd2>0){
+        html+='<div class="vc-period free"><div><div class="vc-label">Available</div><div class="vc-dates">'+fmt(fsStr2)+' – '+fmt(feStr2)+'</div></div><div class="vc-status green">✓ '+fd2+' days</div></div>';
+      }
+    }
+  }
+
+  var freeDays=totalDays-bookedDays;
+  var occ=Math.round((bookedDays/totalDays)*100);
+  var rev=(bookedDays*vehicle.price).toLocaleString();
+  html+='<div class="vc-summary"><strong>'+new Date(year,month-1,1).toLocaleString('en-US',{month:'long'})+' Summary</strong>'
+    +'Booked: '+bookedDays+' days &nbsp;·&nbsp; Free: '+freeDays+' days<br>'
+    +'Occupancy: '+occ+'% &nbsp;·&nbsp; Revenue: J$'+rev+'<br>'
+    +'Rate: J$'+vehicle.price.toLocaleString()+'/day</div>';
+
+  el.innerHTML=html;
+}
 </script>
 
 </body>
